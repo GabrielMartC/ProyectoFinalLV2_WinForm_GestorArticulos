@@ -1,0 +1,10 @@
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\bin\Debug\presentacion.exe.config
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\bin\Debug\presentacion.exe
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\bin\Debug\presentacion.pdb
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.csproj.AssemblyReference.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.Properties.Resources.resources
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.csproj.GenerateResource.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.csproj.CoreCompileInputs.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.exe
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.pdb
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\TPFinalNivel2_MartinezCondori\presentacion\obj\Debug\presentacion.frmPrincipal.resources
