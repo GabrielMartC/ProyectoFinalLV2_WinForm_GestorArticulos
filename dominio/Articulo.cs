@@ -9,13 +9,13 @@ namespace dominio
     public class Articulo
     {
         public int Id { get; set; }// para hacer las relaciones entre tablas
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion {  get; set; }
-        public Marca MarcaArticulo { get; set; }
-        public Categoria CategoriaArticulo { get; set; }
+        public Marca Marca { get; set; }
+        public Categoria Categoria { get; set; }
         public string UrlImagen { get; set; }
-        public double Precio { get; set; } //fijarse el equivalente en tipo money
+        public decimal Precio { get; set; } //equivalente de tipo money: decimal
 
         public Articulo() { }
 

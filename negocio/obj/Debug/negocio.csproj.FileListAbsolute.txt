@@ -1,0 +1,9 @@
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\bin\Debug\negocio.dll
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\bin\Debug\negocio.pdb
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\bin\Debug\dominio.dll
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\bin\Debug\dominio.pdb
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\obj\Debug\negocio.dll
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\negocio\obj\Debug\negocio.pdb

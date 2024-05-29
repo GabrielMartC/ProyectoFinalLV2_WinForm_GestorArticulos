@@ -1,0 +1,6 @@
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\bin\Debug\dominio.dll
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\bin\Debug\dominio.pdb
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\obj\Debug\dominio.dll
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\dominio\obj\Debug\dominio.pdb
