@@ -17,14 +17,14 @@ namespace negocio
         public SqlDataReader Lector { //el metodo
             get
             {
-                return this.lector;
+                return lector;
             }
         }
 
         public AccesoDatos()
         {
-            this.conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
-            this.comando = new SqlCommand();
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
+            comando = new SqlCommand();
         }
 
         public void setearConsulta(String consulta)

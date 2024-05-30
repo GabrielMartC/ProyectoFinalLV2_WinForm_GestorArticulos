@@ -24,7 +24,9 @@ namespace negocio
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio From ARTICULOS";
+                //comando.CommandText = "Select Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio From ARTICULOS";
+                //consulta varias tablas...
+                comando.CommandText = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion as Marca, A.IdCategoria, C.Descripcion as Categoria, A.ImagenUrl, A.Precio From ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -41,13 +43,13 @@ namespace negocio
 
                     articulo.Marca = new Marca();
                     articulo.Marca.Id = (int)lector["IdMarca"];
-                    //articulo.Marca.Descripcion = (string)lector["..."];  cuando relacione la otro tabla...
+                    articulo.Marca.Descripcion = (string)lector["Marca"];  
 
                     articulo.Categoria = new Categoria();
                     articulo.Categoria.Id = (int)lector["IdCategoria"];
-                    //articulo.Categoria.Descripcion = (string)lector["..."];  cuando relacione la otro tabla...
+                    articulo.Categoria.Descripcion = (string)lector["Categoria"];
 
-                    articulo.UrlImagen = (string)lector["ImagenUrl"];
+                    articulo.ImagenUrl = (string)lector["ImagenUrl"];
                     articulo.Precio = (decimal)lector["Precio"];
 
                     listaArticulos.Add(articulo);
@@ -62,8 +64,6 @@ namespace negocio
                 throw ex;
             } 
         }
-
-
 
 
         public void agregarNuevo(Articulo articuloNuevo)

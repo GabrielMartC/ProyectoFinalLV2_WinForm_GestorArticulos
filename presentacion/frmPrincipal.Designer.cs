@@ -40,7 +40,7 @@
             // 
             // stastrEstado
             // 
-            this.stastrEstado.Location = new System.Drawing.Point(0, 405);
+            this.stastrEstado.Location = new System.Drawing.Point(0, 539);
             this.stastrEstado.Name = "stastrEstado";
             this.stastrEstado.Size = new System.Drawing.Size(881, 22);
             this.stastrEstado.TabIndex = 0;
@@ -77,7 +77,8 @@
             // 
             this.pbImagenArticulo.Location = new System.Drawing.Point(648, 73);
             this.pbImagenArticulo.Name = "pbImagenArticulo";
-            this.pbImagenArticulo.Size = new System.Drawing.Size(221, 281);
+            this.pbImagenArticulo.Size = new System.Drawing.Size(221, 305);
+            this.pbImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagenArticulo.TabIndex = 5;
             this.pbImagenArticulo.TabStop = false;
             // 
@@ -86,14 +87,15 @@
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(161, 73);
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(481, 324);
+            this.dgvArticulos.Size = new System.Drawing.Size(481, 463);
             this.dgvArticulos.TabIndex = 6;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 427);
+            this.ClientSize = new System.Drawing.Size(881, 561);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.pbImagenArticulo);
             this.Controls.Add(this.btnAgregar);
