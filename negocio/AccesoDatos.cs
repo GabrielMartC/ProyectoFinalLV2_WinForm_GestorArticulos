@@ -54,7 +54,7 @@ namespace negocio
 
         }
 
-        public void ejecutarAccion() //para ejecutar la sentencia de INSERT 
+        public void ejecutarAccion() //para ejecutar la sentencia de INSERT,DELETE, UPDATE 
         {
             comando.Connection = conexion;
             try

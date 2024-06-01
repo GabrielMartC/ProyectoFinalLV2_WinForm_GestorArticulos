@@ -163,7 +163,7 @@ namespace presentacion
                 string campo = cbCampo.SelectedItem.ToString();
                 string criterio = cbCriterio.SelectedItem.ToString();
                 string filtro = tbFiltro.Text;
-                dgvArticulos.DataSource = negocio.filtroAvanzado(campo, criterio, filtro);
+                dgvArticulos.DataSource = negocio.listarFiltroAvanzado(campo, criterio, filtro);
 
             }
             catch (Exception ex)
