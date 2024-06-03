@@ -172,17 +172,91 @@ namespace presentacion
             }
         }
 
-        //private void tbDescripcion_TextChanged(object sender, EventArgs e) 
+        private void tbFiltroBR_TextChanged(object sender, EventArgs e) //filtro rapido
+        {
+            List<Articulo> listaFiltrada;
+            string criterio = cbCampo.SelectedItem.ToString();
+            string filtro = tbFiltroBR.Text;
+
+            try
+            {
+                //List<Articulo> listaFiltrada;
+
+                
+                if (filtro.Length >= 3 && criterio.Equals("Código"))
+                {
+                    listaFiltrada = listaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(filtro.ToUpper()));
+                }
+
+                else if (filtro.Length >= 3 && criterio.Equals("Nombre"))
+                {
+                    listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+                }
+
+                else if (filtro.Length >= 3 && criterio.Equals("Marca"))
+                {
+                    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString().ToUpper().Contains(filtro.ToUpper()));
+                }
+
+                else if (filtro.Length >= 3 && criterio.Equals("Precio"))
+                {
+                    listaFiltrada = listaArticulos.FindAll(x => x.Precio.ToString().ToUpper().Contains(filtro.ToUpper()));
+                }
+
+                else
+                {
+                    listaFiltrada = listaArticulos;
+                }
+
+                dgvArticulos.DataSource = null; //primero limpiamos
+                dgvArticulos.DataSource = listaFiltrada;
+                ocultarColumnas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tbFiltro.Text = "";
+                tbFiltroBR.Text = "";
+                cbCampo.ResetText();
+                cbCriterio.ResetText();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+
+        private void rbFiltroRapido_CheckedChanged(object sender, EventArgs e)
+        {
+            //gbFiltros.Location.Y = 15;
+            this.gbFiltros.Location = new System.Drawing.Point(161, 15);
+            this.lblCampo.Location = new System.Drawing.Point(162, 80);
+            this.cbCampo.Location = new System.Drawing.Point(204, 75);
+            //agregar el resto de movimientos, ocultamiento.
+        }
+
+        private void rbFiltroAvanzado_CheckedChanged(object sender, EventArgs e)
+        {
+            this.gbFiltros.Location = new System.Drawing.Point(161, 15);
+            this.lblCampo.Location = new System.Drawing.Point(162, 80);
+            this.cbCampo.Location = new System.Drawing.Point(204, 75);
+            //agregar el resto de movimientos, ocultamiento.
+
+        }
+
+        //private void filtroSeleccionado(RadioButton filtroRapido, RadioButton filtroAvanzado)
         //{
-        //    try
-        //    {
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        MessageBox.Show(ex.ToString());
-        //    }
         //}
+
     }
 }

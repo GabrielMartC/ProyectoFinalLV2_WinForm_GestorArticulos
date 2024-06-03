@@ -46,8 +46,6 @@
             this.lblFiltro = new System.Windows.Forms.Label();
             this.tbFiltro = new System.Windows.Forms.TextBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.cbCampoBR = new System.Windows.Forms.ComboBox();
-            this.lblCampoBR = new System.Windows.Forms.Label();
             this.tbFiltroBR = new System.Windows.Forms.TextBox();
             this.lblFiltroBR = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
@@ -124,7 +122,7 @@
             // 
             this.gbFiltros.Controls.Add(this.rbFiltroAvanzado);
             this.gbFiltros.Controls.Add(this.rbFiltroRapido);
-            this.gbFiltros.Location = new System.Drawing.Point(161, -3);
+            this.gbFiltros.Location = new System.Drawing.Point(164, 55);
             this.gbFiltros.Name = "gbFiltros";
             this.gbFiltros.Size = new System.Drawing.Size(216, 39);
             this.gbFiltros.TabIndex = 8;
@@ -140,6 +138,7 @@
             this.rbFiltroAvanzado.TabStop = true;
             this.rbFiltroAvanzado.Text = "Filtro Avanzado";
             this.rbFiltroAvanzado.UseVisualStyleBackColor = true;
+            this.rbFiltroAvanzado.CheckedChanged += new System.EventHandler(this.rbFiltroAvanzado_CheckedChanged);
             // 
             // rbFiltroRapido
             // 
@@ -151,6 +150,7 @@
             this.rbFiltroRapido.TabStop = true;
             this.rbFiltroRapido.Text = "Filtro Rapido";
             this.rbFiltroRapido.UseVisualStyleBackColor = true;
+            this.rbFiltroRapido.CheckedChanged += new System.EventHandler(this.rbFiltroRapido_CheckedChanged);
             // 
             // btnLimpiarFiltro
             // 
@@ -160,11 +160,12 @@
             this.btnLimpiarFiltro.TabIndex = 9;
             this.btnLimpiarFiltro.Text = "Limpiar Todo";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
+            this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
             // 
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(164, 49);
+            this.lblCampo.Location = new System.Drawing.Point(161, 44);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 10;
@@ -173,7 +174,7 @@
             // cbCampo
             // 
             this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(206, 44);
+            this.cbCampo.Location = new System.Drawing.Point(203, 39);
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 21);
             this.cbCampo.TabIndex = 11;
@@ -182,7 +183,7 @@
             // cbCriterio
             // 
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(387, 44);
+            this.cbCriterio.Location = new System.Drawing.Point(387, 10);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbCriterio.TabIndex = 13;
@@ -190,7 +191,7 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(345, 49);
+            this.lblCriterio.Location = new System.Drawing.Point(345, 15);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(39, 13);
             this.lblCriterio.TabIndex = 12;
@@ -199,7 +200,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(525, 49);
+            this.lblFiltro.Location = new System.Drawing.Point(525, 15);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(29, 13);
             this.lblFiltro.TabIndex = 14;
@@ -207,7 +208,7 @@
             // 
             // tbFiltro
             // 
-            this.tbFiltro.Location = new System.Drawing.Point(556, 44);
+            this.tbFiltro.Location = new System.Drawing.Point(556, 10);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(121, 20);
             this.tbFiltro.TabIndex = 15;
@@ -222,34 +223,18 @@
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // cbCampoBR
-            // 
-            this.cbCampoBR.FormattingEnabled = true;
-            this.cbCampoBR.Location = new System.Drawing.Point(206, 73);
-            this.cbCampoBR.Name = "cbCampoBR";
-            this.cbCampoBR.Size = new System.Drawing.Size(121, 21);
-            this.cbCampoBR.TabIndex = 18;
-            // 
-            // lblCampoBR
-            // 
-            this.lblCampoBR.AutoSize = true;
-            this.lblCampoBR.Location = new System.Drawing.Point(164, 78);
-            this.lblCampoBR.Name = "lblCampoBR";
-            this.lblCampoBR.Size = new System.Drawing.Size(40, 13);
-            this.lblCampoBR.TabIndex = 17;
-            this.lblCampoBR.Text = "Campo";
-            // 
             // tbFiltroBR
             // 
-            this.tbFiltroBR.Location = new System.Drawing.Point(387, 74);
+            this.tbFiltroBR.Location = new System.Drawing.Point(387, 40);
             this.tbFiltroBR.Name = "tbFiltroBR";
             this.tbFiltroBR.Size = new System.Drawing.Size(121, 20);
             this.tbFiltroBR.TabIndex = 20;
+            this.tbFiltroBR.TextChanged += new System.EventHandler(this.tbFiltroBR_TextChanged);
             // 
             // lblFiltroBR
             // 
             this.lblFiltroBR.AutoSize = true;
-            this.lblFiltroBR.Location = new System.Drawing.Point(356, 79);
+            this.lblFiltroBR.Location = new System.Drawing.Point(356, 45);
             this.lblFiltroBR.Name = "lblFiltroBR";
             this.lblFiltroBR.Size = new System.Drawing.Size(29, 13);
             this.lblFiltroBR.TabIndex = 19;
@@ -262,8 +247,6 @@
             this.ClientSize = new System.Drawing.Size(873, 531);
             this.Controls.Add(this.tbFiltroBR);
             this.Controls.Add(this.lblFiltroBR);
-            this.Controls.Add(this.cbCampoBR);
-            this.Controls.Add(this.lblCampoBR);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.tbFiltro);
             this.Controls.Add(this.lblFiltro);
@@ -302,7 +285,6 @@
         private System.Windows.Forms.PictureBox pbImagenArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.TextBox tbDescripcion;
-        private System.Windows.Forms.GroupBox gbFiltros;
         private System.Windows.Forms.RadioButton rbFiltroAvanzado;
         private System.Windows.Forms.RadioButton rbFiltroRapido;
         private System.Windows.Forms.Button btnLimpiarFiltro;
@@ -313,10 +295,9 @@
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox tbFiltro;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.ComboBox cbCampoBR;
-        private System.Windows.Forms.Label lblCampoBR;
         private System.Windows.Forms.TextBox tbFiltroBR;
         private System.Windows.Forms.Label lblFiltroBR;
+        private System.Windows.Forms.GroupBox gbFiltros;
     }
 }
 
