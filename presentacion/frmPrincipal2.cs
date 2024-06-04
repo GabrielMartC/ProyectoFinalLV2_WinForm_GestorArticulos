@@ -15,10 +15,11 @@ using negocio;
 
 namespace presentacion
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipal2 : Form
     {
         private List<Articulo> listaArticulos;
-        public frmPrincipal()
+
+        public frmPrincipal2()
         {
             InitializeComponent();
         }
@@ -148,7 +149,7 @@ namespace presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
@@ -251,7 +252,7 @@ namespace presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void rbFiltroRapido_CheckedChanged(object sender, EventArgs e)
@@ -309,38 +310,51 @@ namespace presentacion
 
         }
 
-        //private void btnAgregar_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        foreach (var item in Application.OpenForms)
-        //        {
-        //            if (item.GetType() == typeof(frmAltaArticulo))
-        //            {
-        //                return;
-        //            }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    foreach (var item in Application.OpenForms)
+            //    {
+            //        if (item.GetType() == typeof(frmAltaArticulo))
+            //        {
+            //            return;
+            //        }
 
-        //        }
+            //    }
 
-        //        //usando paneles...
-
-
-        //        frmAltaArticulo nuevaVentana = new frmAltaArticulo();
-        //        //nuevaVentana.TopLevel = false;
-        //        //this.panelNuevoArt.Controls.Add(nuevaVentana);
-        //        nuevaVentana.MdiParent = this;
-        //        //panelNuevoArt.Visible = true;
-        //        nuevaVentana.Show();
+            //    //usando paneles...
 
 
-        //    }
-        //    catch (Exception ex )
-        //    {
+            //    frmAltaArticulo nuevaVentana = new frmAltaArticulo();
+            //    //nuevaVentana.TopLevel = false;
+            //    //this.panelNuevoArt.Controls.Add(nuevaVentana);
+            //    nuevaVentana.MdiParent = this;
+            //    //panelNuevoArt.Visible = true;
+            //    nuevaVentana.Show();
 
-        //        MessageBox.Show(ex.ToString());
-        //    }
-          
-        //}
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    MessageBox.Show(ex.ToString());
+            //}
+            cargarVentana(new frmAltaArticulo());
+        }
+
+        private void cargarVentana(object Form)
+        {
+            if (this.panelPrincipal.Controls.Count > 0){
+                this.panelPrincipal.Controls.RemoveAt(0);
+            }
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panelPrincipal.Controls.Add(f);
+            this.panelPrincipal.Tag = f;
+            f.Show();
+        }
 
         //private void filtroSeleccionado(RadioButton filtroRapido, RadioButton filtroAvanzado)
         //{

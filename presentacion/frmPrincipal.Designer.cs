@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.stastrEstado = new System.Windows.Forms.StatusStrip();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.pbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
@@ -48,9 +45,14 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.tbFiltroBR = new System.Windows.Forms.TextBox();
             this.lblFiltroBR = new System.Windows.Forms.Label();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.gbFiltros.SuspendLayout();
+            this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // stastrEstado
@@ -60,34 +62,6 @@
             this.stastrEstado.Size = new System.Drawing.Size(873, 22);
             this.stastrEstado.TabIndex = 0;
             this.stastrEstado.Text = "statusStrip1";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(3, 271);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(154, 50);
-            this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(3, 188);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(154, 50);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(3, 128);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(155, 50);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar Nuevo";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // pbImagenArticulo
             // 
@@ -241,11 +215,51 @@
             this.lblFiltroBR.TabIndex = 19;
             this.lblFiltroBR.Text = "Filtro";
             // 
+            // panelBotones
+            // 
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelBotones.Controls.Add(this.btnEliminar);
+            this.panelBotones.Controls.Add(this.btnModificar);
+            this.panelBotones.Controls.Add(this.btnAgregar);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(155, 509);
+            this.panelBotones.TabIndex = 21;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(0, 110);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(155, 50);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Agregar Articulo";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(0, 176);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(155, 50);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(0, 286);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(155, 50);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 531);
+            this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.tbFiltroBR);
             this.Controls.Add(this.lblFiltroBR);
             this.Controls.Add(this.btnFiltrar);
@@ -260,11 +274,7 @@
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.pbImagenArticulo);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.stastrEstado);
-            this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -273,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.gbFiltros.ResumeLayout(false);
             this.gbFiltros.PerformLayout();
+            this.panelBotones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,9 +292,6 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip stastrEstado;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pbImagenArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.TextBox tbDescripcion;
@@ -300,6 +308,10 @@
         private System.Windows.Forms.TextBox tbFiltroBR;
         private System.Windows.Forms.Label lblFiltroBR;
         private System.Windows.Forms.GroupBox gbFiltros;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

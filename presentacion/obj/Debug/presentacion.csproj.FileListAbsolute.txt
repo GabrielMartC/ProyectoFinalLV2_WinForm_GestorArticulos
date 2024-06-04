@@ -24,3 +24,4 @@ C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\Proyecto
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\bin\Debug\negocio.pdb
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presenta.D2D8CCE5.Up2Date
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmAltaArticulo.resources
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmPrincipal2.resources
