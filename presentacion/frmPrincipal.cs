@@ -33,6 +33,27 @@ namespace presentacion
 
             cargarComboBoxes();
 
+            ocultarSeccionFiltrar();
+
+            //panelNuevoArt.Visible = false; //prueba...
+
+        }
+
+        private void ocultarSeccionFiltrar()
+        {
+            btnFiltrar.Visible = false;
+            btnLimpiarFiltro.Visible = false;
+
+            lblCampo.Visible = false;
+            lblCriterio.Visible = false;
+            lblFiltro.Visible = false;
+            lblFiltroBR.Visible = false;
+
+            cbCampo.Visible = false;
+            cbCriterio.Visible = false;
+            tbFiltro.Visible = false;
+            tbFiltroBR.Visible = false;
+
         }
 
         private void cargarDataGridView() //cargamos el dgvArticulos
@@ -45,7 +66,6 @@ namespace presentacion
                 dgvArticulos.DataSource = listaArticulos;
 
                 ocultarColumnas();
-
 
             }
             catch (Exception ex)
@@ -180,25 +200,22 @@ namespace presentacion
 
             try
             {
-                //List<Articulo> listaFiltrada;
-
-                
-                if (filtro.Length >= 3 && criterio.Equals("Código"))
+                if (filtro.Length > 1 && criterio.Equals("Código"))
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(filtro.ToUpper()));
                 }
 
-                else if (filtro.Length >= 3 && criterio.Equals("Nombre"))
+                else if (filtro.Length > 1 && criterio.Equals("Nombre"))
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
                 }
 
-                else if (filtro.Length >= 3 && criterio.Equals("Marca"))
+                else if (filtro.Length > 1 && criterio.Equals("Marca"))
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString().ToUpper().Contains(filtro.ToUpper()));
                 }
 
-                else if (filtro.Length >= 3 && criterio.Equals("Precio"))
+                else if (filtro.Length > 1 && criterio.Equals("Precio"))
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Precio.ToString().ToUpper().Contains(filtro.ToUpper()));
                 }
@@ -227,6 +244,8 @@ namespace presentacion
                 tbFiltroBR.Text = "";
                 cbCampo.ResetText();
                 cbCriterio.ResetText();
+
+                cargarDataGridView();
             }
             catch (Exception ex)
             {
@@ -237,20 +256,90 @@ namespace presentacion
 
         private void rbFiltroRapido_CheckedChanged(object sender, EventArgs e)
         {
-            //gbFiltros.Location.Y = 15;
-            this.gbFiltros.Location = new System.Drawing.Point(161, 15);
+            this.btnFiltrar.Visible = false;
+            this.btnLimpiarFiltro.Visible = false;
+
+            this.lblCampo.Visible = true;
+            this.cbCampo.Visible = true;
+
+            this.lblFiltroBR.Visible = true;
+            this.tbFiltroBR.Visible = true;
+
+            this.lblCriterio.Visible = false;
+            this.cbCriterio.Visible = false;
+
+            this.lblFiltro.Visible = false;
+            this.tbFiltro.Visible = false;
+
+            this.gbFiltros.Location = new System.Drawing.Point(161, 30);
             this.lblCampo.Location = new System.Drawing.Point(162, 80);
             this.cbCampo.Location = new System.Drawing.Point(204, 75);
+            this.lblFiltroBR.Location = new System.Drawing.Point(356, 80);
+            this.tbFiltroBR.Location = new System.Drawing.Point(387, 75);
             //agregar el resto de movimientos, ocultamiento.
         }
 
         private void rbFiltroAvanzado_CheckedChanged(object sender, EventArgs e)
         {
-            this.gbFiltros.Location = new System.Drawing.Point(161, 15);
+            this.btnFiltrar.Visible = true;
+            this.btnLimpiarFiltro.Visible = true;
+
+            this.lblCampo.Visible = true;
+            this.cbCampo.Visible = true;
+
+            this.lblFiltroBR.Visible = false;
+            this.tbFiltroBR.Visible = false;
+
+            this.lblCriterio.Visible = true;
+            this.cbCriterio.Visible = true;
+
+            this.lblFiltro.Visible = true;
+            this.tbFiltro.Visible = true;
+
+            this.gbFiltros.Location = new System.Drawing.Point(161, 30);
+
             this.lblCampo.Location = new System.Drawing.Point(162, 80);
             this.cbCampo.Location = new System.Drawing.Point(204, 75);
-            //agregar el resto de movimientos, ocultamiento.
 
+            this.lblCriterio.Location = new System.Drawing.Point(350, 80);
+            this.cbCriterio.Location = new System.Drawing.Point(387, 75);
+
+            this.lblFiltro.Location = new System.Drawing.Point(524, 80);
+            this.tbFiltro.Location = new System.Drawing.Point(555, 75);
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in Application.OpenForms)
+                {
+                    if (item.GetType() == typeof(frmAltaArticulo))
+                    {
+                        return;
+                    }
+
+                }
+
+                //usando paneles...
+
+
+                frmAltaArticulo nuevaVentana = new frmAltaArticulo();
+                //nuevaVentana.TopLevel = false;
+                //this.panelNuevoArt.Controls.Add(nuevaVentana);
+                nuevaVentana.MdiParent = this;
+                //panelNuevoArt.Visible = true;
+                nuevaVentana.Show();
+
+
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+          
         }
 
         //private void filtroSeleccionado(RadioButton filtroRapido, RadioButton filtroAvanzado)

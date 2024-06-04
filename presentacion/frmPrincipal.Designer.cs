@@ -87,6 +87,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // pbImagenArticulo
             // 
@@ -154,7 +155,7 @@
             // 
             // btnLimpiarFiltro
             // 
-            this.btnLimpiarFiltro.Location = new System.Drawing.Point(688, 67);
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(682, 45);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(94, 23);
             this.btnLimpiarFiltro.TabIndex = 9;
@@ -165,7 +166,7 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(161, 44);
+            this.lblCampo.Location = new System.Drawing.Point(161, 41);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 10;
@@ -174,7 +175,7 @@
             // cbCampo
             // 
             this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(203, 39);
+            this.cbCampo.Location = new System.Drawing.Point(203, 36);
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 21);
             this.cbCampo.TabIndex = 11;
@@ -183,7 +184,7 @@
             // cbCriterio
             // 
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(387, 10);
+            this.cbCriterio.Location = new System.Drawing.Point(386, 36);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbCriterio.TabIndex = 13;
@@ -191,7 +192,7 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(345, 15);
+            this.lblCriterio.Location = new System.Drawing.Point(344, 41);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(39, 13);
             this.lblCriterio.TabIndex = 12;
@@ -200,7 +201,7 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(525, 15);
+            this.lblFiltro.Location = new System.Drawing.Point(524, 39);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(29, 13);
             this.lblFiltro.TabIndex = 14;
@@ -208,14 +209,14 @@
             // 
             // tbFiltro
             // 
-            this.tbFiltro.Location = new System.Drawing.Point(556, 10);
+            this.tbFiltro.Location = new System.Drawing.Point(555, 34);
             this.tbFiltro.Name = "tbFiltro";
             this.tbFiltro.Size = new System.Drawing.Size(121, 20);
             this.tbFiltro.TabIndex = 15;
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(688, 42);
+            this.btnFiltrar.Location = new System.Drawing.Point(682, 73);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
             this.btnFiltrar.TabIndex = 16;
@@ -225,7 +226,7 @@
             // 
             // tbFiltroBR
             // 
-            this.tbFiltroBR.Location = new System.Drawing.Point(387, 40);
+            this.tbFiltroBR.Location = new System.Drawing.Point(386, 10);
             this.tbFiltroBR.Name = "tbFiltroBR";
             this.tbFiltroBR.Size = new System.Drawing.Size(121, 20);
             this.tbFiltroBR.TabIndex = 20;
@@ -234,7 +235,7 @@
             // lblFiltroBR
             // 
             this.lblFiltroBR.AutoSize = true;
-            this.lblFiltroBR.Location = new System.Drawing.Point(356, 45);
+            this.lblFiltroBR.Location = new System.Drawing.Point(355, 15);
             this.lblFiltroBR.Name = "lblFiltroBR";
             this.lblFiltroBR.Size = new System.Drawing.Size(29, 13);
             this.lblFiltroBR.TabIndex = 19;
@@ -263,6 +264,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.stastrEstado);
+            this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

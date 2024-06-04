@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{039323CE-BBAE-4C5B-B087-F8E3A84DDFB7}|dominio\\dominio.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{039323CE-BBAE-4C5B-B087-F8E3A84DDFB7}|dominio\\dominio.csproj|solutionrelative:dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5C465-3C64-4456-AB08-005BC02DB69D}|negocio\\negocio.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5C465-3C64-4456-AB08-005BC02DB69D}|negocio\\negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBE5C465-3C64-4456-AB08-005BC02DB69D}|negocio\\negocio.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "frmAltaArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs",
+              "RelativeToolTip": "presentacion\\frmAltaArticulo.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T22:06:27.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmPrincipal.cs [Design]",
               "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "presentacion\\frmPrincipal.cs",
@@ -50,28 +63,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal.cs",
               "RelativeDocumentMoniker": "presentacion\\frmPrincipal.cs",
               "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal.cs",
               "RelativeToolTip": "presentacion\\frmPrincipal.cs",
-              "ViewState": "AQIAAOkAAAAAAAAAAAAAAPMAAAA8AAAA",
+              "ViewState": "AQIAADIBAAAAAAAAAAAAAEgBAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T03:09:34.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticuloNegocio.cs",
-              "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\negocio\\ArticuloNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\ArticuloNegocio.cs",
-              "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\negocio\\ArticuloNegocio.cs",
-              "RelativeToolTip": "negocio\\ArticuloNegocio.cs",
-              "ViewState": "AQIAANUAAAAAAAAAAAAAAA0BAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T03:24:17.49Z",
               "EditorCaption": ""
             },
             {
@@ -84,12 +84,11 @@
               "RelativeToolTip": "negocio\\AccesoDatos.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAArwEcAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T14:23:06.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T14:23:06.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Articulo.cs",
               "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\dominio\\Articulo.cs",
               "RelativeDocumentMoniker": "dominio\\Articulo.cs",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "dominio\\Articulo.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAAABMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:28:15.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T04:28:15.751Z"
             }
           ]
         }
