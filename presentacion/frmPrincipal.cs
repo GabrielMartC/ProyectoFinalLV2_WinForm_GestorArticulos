@@ -309,38 +309,36 @@ namespace presentacion
 
         }
 
-        //private void btnAgregar_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        foreach (var item in Application.OpenForms)
-        //        {
-        //            if (item.GetType() == typeof(frmAltaArticulo))
-        //            {
-        //                return;
-        //            }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in Application.OpenForms)
+                {
+                    if (item.GetType() == typeof(frmAltaArticulo))
+                    {
+                        return;
+                    }
 
-        //        }
+                }
 
-        //        //usando paneles...
-
-
-        //        frmAltaArticulo nuevaVentana = new frmAltaArticulo();
-        //        //nuevaVentana.TopLevel = false;
-        //        //this.panelNuevoArt.Controls.Add(nuevaVentana);
-        //        nuevaVentana.MdiParent = this;
-        //        //panelNuevoArt.Visible = true;
-        //        nuevaVentana.Show();
+                //usando paneles...
+                frmAltaArticulo nuevaVentana = new frmAltaArticulo();
+                //nuevaVentana.TopLevel = false;
+                //this.panelNuevoArt.Controls.Add(nuevaVentana);
+                nuevaVentana.MdiParent = this;
+                //panelNuevoArt.Visible = true;
+                nuevaVentana.Show();
 
 
-        //    }
-        //    catch (Exception ex )
-        //    {
+            }
+            catch (Exception ex)
+            {
 
-        //        MessageBox.Show(ex.ToString());
-        //    }
-          
-        //}
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
 
         //private void filtroSeleccionado(RadioButton filtroRapido, RadioButton filtroAvanzado)
         //{
