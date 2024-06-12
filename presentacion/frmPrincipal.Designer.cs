@@ -42,12 +42,12 @@
             this.lblCriterio = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.tbFiltro = new System.Windows.Forms.TextBox();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.tbFiltroBR = new System.Windows.Forms.TextBox();
             this.lblFiltroBR = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.gbFiltros.SuspendLayout();
@@ -186,16 +186,6 @@
             this.tbFiltro.Size = new System.Drawing.Size(121, 20);
             this.tbFiltro.TabIndex = 15;
             // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(682, 73);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
-            this.btnFiltrar.TabIndex = 16;
-            this.btnFiltrar.Text = "Buscar";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
             // tbFiltroBR
             // 
             this.tbFiltroBR.Location = new System.Drawing.Point(386, 10);
@@ -240,6 +230,16 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(682, 73);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
+            this.btnFiltrar.TabIndex = 16;
+            this.btnFiltrar.Text = "Buscar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmPrincipal
             // 
@@ -293,13 +293,13 @@
         private System.Windows.Forms.Label lblCriterio;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.TextBox tbFiltro;
-        private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.TextBox tbFiltroBR;
         private System.Windows.Forms.Label lblFiltroBR;
         private System.Windows.Forms.GroupBox gbFiltros;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnFiltrar;
     }
 }
 
