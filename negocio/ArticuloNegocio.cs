@@ -278,7 +278,30 @@ namespace negocio
 
         public void agregarNuevo(Articulo articuloNuevo)
         {
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearConsulta("Insert Into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) Values (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)");
+                //datos.setearParametro();
+                datos.setearParametro("@Codigo",articuloNuevo.Codigo);
+                datos.setearParametro("@Nombre", articuloNuevo.Nombre);
+                datos.setearParametro("@Descripcion", articuloNuevo.Descripcion);
+                datos.setearParametro("@IdMarca", articuloNuevo.Marca.Id);
+                datos.setearParametro("@IdCategoria", articuloNuevo.Categoria.Id);
+                datos.setearParametro("@ImagenUrl", articuloNuevo.ImagenUrl);
+                datos.setearParametro("@Precio", articuloNuevo.Precio);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
         public void modificar(Articulo articulo)
         {

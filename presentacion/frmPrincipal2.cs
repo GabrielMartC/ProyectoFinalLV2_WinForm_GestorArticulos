@@ -28,7 +28,7 @@ namespace presentacion
 
         }
 
-        private void loadForms(object Form) //metodo para cargar form dentro de panelPrincipal
+        public void loadForms(object Form) //metodo para cargar form dentro de panelPrincipal
         {
             try
             {
@@ -53,6 +53,15 @@ namespace presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             loadForms(new frmAltaArticulo());
+            //cargarDataGridView();
+            
+
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            loadForms(new frmListadoArticulo());
         }
     }
 }

@@ -46,9 +46,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.tbUrlImagen = new System.Windows.Forms.TextBox();
             this.lblUrlImagen = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImagenAlta = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenAlta)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -186,6 +186,7 @@
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // tbUrlImagen
             // 
@@ -193,6 +194,7 @@
             this.tbUrlImagen.Name = "tbUrlImagen";
             this.tbUrlImagen.Size = new System.Drawing.Size(172, 20);
             this.tbUrlImagen.TabIndex = 17;
+            this.tbUrlImagen.Leave += new System.EventHandler(this.tbUrlImagen_Leave);
             // 
             // lblUrlImagen
             // 
@@ -203,20 +205,21 @@
             this.lblUrlImagen.TabIndex = 16;
             this.lblUrlImagen.Text = "Url de Imagen";
             // 
-            // pictureBox1
+            // pbImagenAlta
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(377, 162);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 305);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pbImagenAlta.Location = new System.Drawing.Point(377, 162);
+            this.pbImagenAlta.Name = "pbImagenAlta";
+            this.pbImagenAlta.Size = new System.Drawing.Size(232, 305);
+            this.pbImagenAlta.TabIndex = 18;
+            this.pbImagenAlta.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 100);
+            this.panel1.Size = new System.Drawing.Size(724, 100);
             this.panel1.TabIndex = 19;
             // 
             // frmAltaArticulo
@@ -226,7 +229,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 513);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbImagenAlta);
             this.Controls.Add(this.tbUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.btnAgregar);
@@ -245,11 +248,11 @@
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAltaArticulo";
             this.Text = "frmAltaArticulo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenAlta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,7 +278,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox tbUrlImagen;
         private System.Windows.Forms.Label lblUrlImagen;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImagenAlta;
         private System.Windows.Forms.Panel panel1;
     }
 }

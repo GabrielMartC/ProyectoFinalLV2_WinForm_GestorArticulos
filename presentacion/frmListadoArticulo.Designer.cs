@@ -90,9 +90,10 @@
             this.panelFiltros.Controls.Add(this.lblCampo);
             this.panelFiltros.Controls.Add(this.btnLimpiarFiltro);
             this.panelFiltros.Controls.Add(this.gbFiltros);
-            this.panelFiltros.Location = new System.Drawing.Point(1, 2);
+            this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFiltros.Location = new System.Drawing.Point(0, 0);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(719, 100);
+            this.panelFiltros.Size = new System.Drawing.Size(724, 100);
             this.panelFiltros.TabIndex = 3;
             // 
             // tbFiltroBR
@@ -226,8 +227,10 @@
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.pbImagenArticulo);
             this.Controls.Add(this.dgvArticulos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListadoArticulo";
             this.Text = "frmListadoArticulo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmListadoArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).EndInit();

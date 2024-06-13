@@ -27,7 +27,8 @@ namespace presentacion
             //1ro cargarmos los elementos para el datagridview
             cargarDataGridView();
 
-            cargarImagen(listaArticulos[0].ImagenUrl);
+            //cargarImagen(listaArticulos[0].ImagenUrl);
+            Helper.CargarImagen(listaArticulos[0].ImagenUrl, pbImagenArticulo);
             cargarDescripcion(listaArticulos[0].Descripcion);
 
             cargarComboBoxes();
@@ -36,7 +37,7 @@ namespace presentacion
 
         }
 
-        private void cargarDataGridView()
+        public void cargarDataGridView()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
@@ -54,19 +55,19 @@ namespace presentacion
             }
         }
 
-        private void cargarImagen(string imagen)
-        {
-            try
-            {
-                pbImagenArticulo.Load(imagen);
-                pbImagenArticulo.SizeMode = PictureBoxSizeMode.Zoom;
-            }
-            catch (Exception) //preguntar si se puede usar un repositorio propio de imagenes...
-            {
-                pbImagenArticulo.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
-                pbImagenArticulo.SizeMode = PictureBoxSizeMode.CenterImage;
-            }
-        }
+        //public void cargarImagen(string imagen)
+        //{
+        //    try
+        //    {
+        //        pbImagenArticulo.Load(imagen);
+        //        pbImagenArticulo.SizeMode = PictureBoxSizeMode.Zoom;
+        //    }
+        //    catch (Exception) //preguntar si se puede usar un repositorio propio de imagenes...
+        //    {
+        //        pbImagenArticulo.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
+        //        pbImagenArticulo.SizeMode = PictureBoxSizeMode.CenterImage;
+        //    }
+        //}
 
         private void cargarDescripcion(string descripcion)  //cargar descripcion al textBox
         {
@@ -146,7 +147,8 @@ namespace presentacion
                 if (dgvArticulos.CurrentRow != null)
                 {
                     Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    cargarImagen(seleccionado.ImagenUrl);
+                    //cargarImagen(seleccionado.ImagenUrl);
+                    Helper.CargarImagen(seleccionado.ImagenUrl, pbImagenArticulo);
                     cargarDescripcion(seleccionado.Descripcion);
                 }
 

@@ -33,12 +33,14 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnListar = new System.Windows.Forms.Button();
             this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBotones
             // 
             this.panelBotones.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelBotones.Controls.Add(this.btnListar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnModificar);
             this.panelBotones.Controls.Add(this.btnAgregar);
@@ -50,7 +52,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(4, 284);
+            this.btnEliminar.Location = new System.Drawing.Point(4, 336);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(155, 50);
             this.btnEliminar.TabIndex = 2;
@@ -59,7 +61,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(4, 191);
+            this.btnModificar.Location = new System.Drawing.Point(4, 243);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(155, 50);
             this.btnModificar.TabIndex = 1;
@@ -68,11 +70,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(4, 134);
+            this.btnAgregar.Location = new System.Drawing.Point(4, 186);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(155, 50);
             this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "Agregar Articulo";
+            this.btnAgregar.Text = "Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -83,6 +85,16 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(709, 531);
             this.panelPrincipal.TabIndex = 2;
+            // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(6, 130);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(155, 50);
+            this.btnListar.TabIndex = 3;
+            this.btnListar.Text = "Ver Articulos";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // frmPrincipal2
             // 
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.Button btnListar;
     }
 }
