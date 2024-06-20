@@ -26,14 +26,48 @@ namespace presentacion
             InitializeComponent();
             this.articulo = articulo; //articulo no es null
             lblTitulo.Text = "Modificar Articulo";
+            btnAgregar.Text = "Modificar";
+            btnLimpiar.Text = "Restablecer";
 
         }
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
-            //al iniciar...
+            try
+            {
+                //al iniciar...
+                cargarComboBoxes();
 
-            cargarComboBoxes();
+                if (articulo != null)
+                {
+                    cargarDatosArticuloSeleccionado();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+
+        private void cargarDatosArticuloSeleccionado()
+        {
+            try
+            {
+                tbCodigo.Text = articulo.Codigo;
+                tbNombre.Text = articulo.Nombre;
+                tbUrlImagen.Text = articulo.ImagenUrl;
+                cbMarca.SelectedValue = articulo.Marca.Id;
+                cbCategoria.SelectedValue = articulo.Categoria.Id;
+                tbPrecio.Text = articulo.Precio.ToString();
+                tbDescripcion.Text = articulo.Descripcion;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargarComboBoxes()
@@ -108,6 +142,11 @@ namespace presentacion
             //cargarImagen(); //si lo vuelvo a copiar, el metodo va a estar repetido...
             //intentar reutilizar el ya creado, o una clase helper
             Helper.CargarImagen(tbUrlImagen.Text, pbImagenAlta);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cargarDatosArticuloSeleccionado();
         }
     }
 }

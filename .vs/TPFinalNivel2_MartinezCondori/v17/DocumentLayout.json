@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|c:\\users\\donat\\onedrive\\escritorio\\maxi programa nivel 2\\proyecto final\\proyectofinallv2_winform_gestorarticulos\\presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3A3A033-8940-451F-9D62-22818BA323BF}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmprincipal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,20 +34,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmPrincipal2.cs",
               "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal2.cs",
               "RelativeDocumentMoniker": "presentacion\\frmPrincipal2.cs",
               "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal2.cs",
               "RelativeToolTip": "presentacion\\frmPrincipal2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwBAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcBAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T20:15:32.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAltaArticulo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs [Design]",
+              "RelativeToolTip": "presentacion\\frmAltaArticulo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T21:46:48.329Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmAltaArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmAltaArticulo.cs",
+              "RelativeToolTip": "presentacion\\frmAltaArticulo.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAACoAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T21:44:08.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmPrincipal2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\donat\\OneDrive\\Escritorio\\Maxi programa NIVEL 2\\Proyecto Final\\ProyectoFinalLV2_WinForm_GestorArticulos\\presentacion\\frmPrincipal2.cs",
               "RelativeDocumentMoniker": "presentacion\\frmPrincipal2.cs",

@@ -11,40 +11,6 @@ namespace negocio
 {
     public class ArticuloNegocio
     {
-        //aca vamos a tener la logica... el agregarNuevo, modificar, eliminar, listar
-
-        //public Articulo mapearArticulo(SqlDataReader lector, SqlCommand comando)
-        //{
-        //    try
-        //    {
-        //        Articulo articuloMapeado = new Articulo();
-        //        while (lector.Read())
-        //        {
-        //            //hacermos con setearConsulta / setearParametro... aunque eso vale mas para INSERT ,UPDATE, DELETE
-        //            articuloMapeado.Id = (int)lector["Id"];
-        //            articuloMapeado.Codigo = (string)lector["Codigo"];
-        //            articuloMapeado.Nombre = (string)lector["Nombre"];
-        //            articuloMapeado.Descripcion = (string)lector["Descripcion"];
-
-        //            articuloMapeado.Marca = new Marca();
-        //            articuloMapeado.Marca.Id = (int)lector["IdMarca"];
-        //            articuloMapeado.Marca.Descripcion = (string)lector["Marca"];
-
-        //            articuloMapeado.Categoria = new Categoria();
-        //            articuloMapeado.Categoria.Id = (int)lector["IdCategoria"];
-        //            articuloMapeado.Categoria.Descripcion = (string)lector["Categoria"];
-
-        //            articuloMapeado.ImagenUrl = (string)lector["ImagenUrl"];
-        //            articuloMapeado.Precio = (decimal)lector["Precio"];
-        //        }
-        //        return articuloMapeado;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         public void mapearArticulo(SqlDataReader lector, List<Articulo>listaArticulos) 
             //toma los datos de la DB y los incluye en un objeto Articulo
         {
@@ -305,6 +271,28 @@ namespace negocio
         }
         public void modificar(Articulo articulo)
         {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, ImagenUrl = @imagenUrl, Precio = @precio Where Id = @id");
+                datos.setearParametro("@codigo",articulo.Codigo);
+                datos.setearParametro("@nombre",articulo.Nombre);
+                datos.setearParametro("@descripcion",articulo.Descripcion);
+                datos.setearParametro("@idMarca",articulo.Marca.Id);
+                datos.setearParametro("@idCategoria",articulo.Categoria.Id);
+                datos.setearParametro("@imagenUrl",articulo.ImagenUrl);
+                datos.setearParametro("@precio",articulo.Precio);
+                datos.setearParametro("@id",articulo.Id);
+
+                datos.ejecutarAccion();
+            
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
 
         }
         public void eliminar(Articulo articulo)

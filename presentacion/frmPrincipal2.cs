@@ -25,7 +25,6 @@ namespace presentacion
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
         {
-            //loadForms(new frmListadoArticulo());
 
             //al iniciar, se oculta el panel para cargar formAltaArticulo
             panelPrincipal.Visible = false; 
@@ -33,10 +32,6 @@ namespace presentacion
 
             //1ro cargarmos los elementos para el datagridview
             cargarDataGridView();
-
-            //cargarImagen(listaArticulos[0].ImagenUrl);
-            Helper.CargarImagen(listaArticulos[0].ImagenUrl, pbImagenArticulo);
-            cargarDescripcion(listaArticulos[0].Descripcion);
 
             cargarComboBoxes();
 
@@ -107,6 +102,9 @@ namespace presentacion
                 listaArticulos = negocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
 
+                Helper.CargarImagen(listaArticulos[0].ImagenUrl, pbImagenArticulo);
+                cargarDescripcion(listaArticulos[0].Descripcion);
+
                 ocultarColumnas();
 
             }
@@ -153,26 +151,64 @@ namespace presentacion
             
         }
 
+        // ----------------------------- eventos ------------------------------
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            panelPrincipal.Visible = true;
-            loadForms(new frmAltaArticulo());
+            try
+            {
+                panelPrincipal.Visible = true;
+                loadForms(new frmAltaArticulo());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            //loadForms(new frmListadoArticulo());
-            panelPrincipal.Visible = false;
+            try
+            {
+                //loadForms(new frmListadoArticulo());
+                panelPrincipal.Visible = false;
+
+                //volver a cargar el datagridview
+                cargarDataGridView();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //deberia ser algo asi como:
-            //loadForms(new frmAltaArticulo(articuloSeleccionado));
+            try
+            {
+                Articulo articuloSeleccionado;
+                articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                panelPrincipal.Visible = true;
+                loadForms(new frmAltaArticulo(articuloSeleccionado));
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
-        // ----------------------------- eventos ------------------------------
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -367,5 +403,7 @@ namespace presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        
     }
 }

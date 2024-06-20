@@ -42,7 +42,6 @@
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.tbUrlImagen = new System.Windows.Forms.TextBox();
             this.lblUrlImagen = new System.Windows.Forms.Label();
@@ -161,21 +160,13 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(100, 346);
+            this.btnLimpiar.Location = new System.Drawing.Point(100, 365);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(81, 27);
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "Limpiar Todo";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(100, 379);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(81, 27);
-            this.btnAtras.TabIndex = 14;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnAgregar
             // 
@@ -222,7 +213,6 @@
             this.Controls.Add(this.tbUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.lblDescripcion);
@@ -263,7 +253,6 @@
         private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox tbUrlImagen;
         private System.Windows.Forms.Label lblUrlImagen;
