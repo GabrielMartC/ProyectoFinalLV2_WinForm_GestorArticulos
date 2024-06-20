@@ -138,6 +138,7 @@ namespace presentacion
             }
         }
 
+
         // ----------------eventos----------------------------------------
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)

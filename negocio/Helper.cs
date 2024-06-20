@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
 
 
 namespace negocio
@@ -22,6 +23,13 @@ namespace negocio
                 pictureBox.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
                 pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             }
+        }
+
+        public static Articulo traerArticuloSeleccionado(DataGridView dgvArticulos)
+        {
+            Articulo articuloSeleccionado;
+            articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            return articuloSeleccionado;
         }
 
     }
