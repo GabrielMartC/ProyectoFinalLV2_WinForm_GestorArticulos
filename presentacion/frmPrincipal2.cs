@@ -37,6 +37,7 @@ namespace presentacion
 
             ocultarSeccionFiltrar();
 
+
         }
 
         private void ocultarSeccionFiltrar()
@@ -206,7 +207,25 @@ namespace presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            Articulo articuloSeleccionado;
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("De verdad desea eliminarlo?","Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    articuloNegocio.eliminar(articuloSeleccionado.Id);
+                
+                }
+                
+                cargarDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -322,8 +341,8 @@ namespace presentacion
         {
             try
             {
-                tbFiltro.Text = "";
-                tbFiltroBR.Text = "";
+                tbFiltro.ResetText();
+                tbFiltroBR.ResetText();
                 cbCampo.ResetText();
                 cbCriterio.ResetText();
 

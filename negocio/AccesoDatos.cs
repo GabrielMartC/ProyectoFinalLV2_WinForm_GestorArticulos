@@ -14,7 +14,7 @@ namespace negocio
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector { //el metodo
+        public SqlDataReader Lector { 
             get
             {
                 return lector;
@@ -40,7 +40,7 @@ namespace negocio
             comando.Parameters.AddWithValue(nombre, valor);
         }
 
-        public void ejecutarLectura() //este metodo realiza la lectura, y lo guarda en el lector
+        public void ejecutarLectura() //ejecuta la sentencia de SELECT, y lo guarda en el lector
         {
             comando.Connection = conexion;
             try
@@ -56,7 +56,7 @@ namespace negocio
 
         }
 
-        public void ejecutarAccion() //para ejecutar la sentencia de INSERT,DELETE, UPDATE 
+        public void ejecutarAccion() //ejecuta la sentencia de INSERT,DELETE,UPDATE 
         {
             comando.Connection = conexion;
             try

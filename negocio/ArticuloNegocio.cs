@@ -60,27 +60,6 @@ namespace negocio
                 datos.ejecutarLectura();
 
                 mapearArticulo(datos.Lector, listaArticulos);
-                //while (datos.Lector.Read())
-                //{
-                //    Articulo articulo = new Articulo();
-                //    articulo.Id = (int)datos.Lector["Id"];
-                //    articulo.Codigo = (string)datos.Lector["Codigo"];
-                //    articulo.Nombre = (string)datos.Lector["Nombre"];
-                //    articulo.Descripcion = (string)datos.Lector["Descripcion"];
-
-                //    articulo.Marca = new Marca();
-                //    articulo.Marca.Id = (int)datos.Lector["IdMarca"];
-                //    articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
-
-                //    articulo.Categoria = new Categoria();
-                //    articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
-                //    articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
-
-                //    articulo.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-                //    articulo.Precio = (decimal)datos.Lector["Precio"];
-
-                //    listaArticulos.Add(articulo);
-                //}
                 datos.cerrarConexion();
 
                 return listaArticulos;
@@ -290,14 +269,35 @@ namespace negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
 
         }
-        public void eliminar(Articulo articulo)
+        public void eliminar(int id) //eliminacion fisica
         {
+            AccesoDatos datos = new AccesoDatos();
 
-        } //eliminacion logica: desabilita un pokemon
+            try
+            {
+                datos.setearConsulta("Delete From ARTICULOS Where Id = @id");
+                datos.setearParametro("@id",id);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

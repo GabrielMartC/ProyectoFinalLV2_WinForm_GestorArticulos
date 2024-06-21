@@ -70,6 +70,18 @@ namespace presentacion
             }
         }
 
+        private void limpiarTodo()
+        {
+            tbCodigo.ResetText();
+            tbNombre.ResetText();
+            tbUrlImagen.ResetText();
+            cbMarca.ResetText();
+            cbCategoria.ResetText();
+            tbPrecio.ResetText();
+            tbDescripcion.ResetText();
+
+        }
+
         private void cargarComboBoxes()
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
@@ -97,7 +109,7 @@ namespace presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
             try
             {
@@ -116,14 +128,15 @@ namespace presentacion
 
                 if (articulo.Id != 0)
                 {
-                    negocio.modificar(articulo);
+                    articuloNegocio.modificar(articulo);
                     MessageBox.Show("Modificado exitosamente!");
                 }
                 else
                 {
-                    negocio.agregarNuevo(articulo);
+                    articuloNegocio.agregarNuevo(articulo);
                     MessageBox.Show("Agregado exitosamente!");
-
+                    
+                    limpiarTodo();
                 }
 
                 //this.Close();
@@ -139,14 +152,24 @@ namespace presentacion
 
         private void tbUrlImagen_Leave(object sender, EventArgs e)
         {
-            //cargarImagen(); //si lo vuelvo a copiar, el metodo va a estar repetido...
-            //intentar reutilizar el ya creado, o una clase helper
+
             Helper.CargarImagen(tbUrlImagen.Text, pbImagenAlta);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            cargarDatosArticuloSeleccionado();
+           
+            if (btnLimpiar.Text == "Limpiar Todo")
+            {
+                limpiarTodo();    //para INSERT
+
+            }
+            else
+            {
+                cargarDatosArticuloSeleccionado(); //para UPDATE
+            }
         }
+
+        
     }
 }
