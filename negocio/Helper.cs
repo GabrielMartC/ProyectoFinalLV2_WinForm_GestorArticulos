@@ -25,12 +25,31 @@ namespace negocio
             }
         }
 
-        public static Articulo traerArticuloSeleccionado(DataGridView dgvArticulos)
+        //public static void ValidarCriterioFiltroAvanzado(DataGridView listadoArticulos)
+        //{
+
+        //}
+
+        public static bool SoloNumeros(string text) //validacion solo numeros
         {
-            Articulo articuloSeleccionado;
-            articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            return articuloSeleccionado;
+            foreach (char caracter in text)
+            {
+                if (!(char.IsNumber(caracter))) //si NO es numero...
+                {
+                    return false;
+                }
+
+            }
+            return true;
         }
 
+        public static bool ValidacionAltaArticulo(TextBox codigo, TextBox nombre, TextBox precio)
+        {
+            if (string.IsNullOrEmpty(codigo.Text) || string.IsNullOrEmpty(nombre.Text) || string.IsNullOrEmpty(precio.Text))
+            {
+                return true; //algunos de los textBox estan vacios
+            }
+            return false;
+        }
     }
 }

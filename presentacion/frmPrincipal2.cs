@@ -161,6 +161,10 @@ namespace presentacion
                 panelPrincipal.Visible = true;
                 loadForms(new frmAltaArticulo());
 
+                //deshabilitar botones
+                btnModificar.Enabled = false;
+                btnEliminar.Enabled = false;
+
             }
             catch (Exception ex)
             {
@@ -175,6 +179,11 @@ namespace presentacion
             {
                 //loadForms(new frmListadoArticulo());
                 panelPrincipal.Visible = false;
+
+                //habilitar botones
+                btnAgregar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
 
                 //volver a cargar el datagridview
                 cargarDataGridView();
@@ -196,6 +205,10 @@ namespace presentacion
                 articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 panelPrincipal.Visible = true;
                 loadForms(new frmAltaArticulo(articuloSeleccionado));
+
+                //deshabilitar botones
+                btnAgregar.Enabled = false;
+                btnEliminar.Enabled = false;
 
             }
             catch (Exception ex)
@@ -277,10 +290,10 @@ namespace presentacion
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                //if (validarFiltro()) //retorna un bool segun si los desplegables de Campo y Criterio esten vacios o no
-                //{
-                //    return; //return para detener la ejecucion
-                //}
+                if (validarFiltro()) //retorna un bool segun si los desplegables de Campo y Criterio esten vacios o no
+                {
+                    return; //return para detener la ejecucion
+                }
 
                 string campo = cbCampo.SelectedItem.ToString();
                 string criterio = cbCriterio.SelectedItem.ToString();
@@ -294,33 +307,71 @@ namespace presentacion
             }
         }
 
+        private bool validarFiltro()
+        {
+            if (cbCampo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar");
+                return true;
+            }
+
+            if (cbCriterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar");
+                return true;
+            }
+
+            //mejorarlo en un metodo de clase helper.
+            if (cbCampo.SelectedItem.ToString() == "Precio") //filtro para Precio
+            {
+                if (string.IsNullOrEmpty(tbFiltro.Text))
+                //si el text box del filtro avanzado esta vacio o es nulo...                                        
+                {
+                    MessageBox.Show("Debes cargar el filtro para numericos...");
+                    return true;
+                }
+                if (!(Helper.SoloNumeros(tbFiltro.Text))) //si no cargaste solo numeros...
+                {
+                    MessageBox.Show("Solo nros para ingresar por un campo numerico...");
+                    return true;
+                }
+
+            }
+            return false; //todo ok
+        }
+
         private void tbFiltroBR_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada;
-            string criterio = cbCampo.SelectedItem.ToString();
+            //string criterio = cbCampo.SelectedItem.ToString();
             string filtro = tbFiltroBR.Text;
 
             try
             {
-                if (filtro.Length > 1 && criterio.Equals("Código"))
-                {
-                    listaFiltrada = listaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(filtro.ToUpper()));
-                }
-
-                else if (filtro.Length > 1 && criterio.Equals("Nombre"))
+                //if (filtro.Length > 1 && criterio.Equals("Nombre"))
+                if (filtro.Length > 1)
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
                 }
+                //if (filtro.Length > 1 && criterio.Equals("Código"))
+                //{
+                //    listaFiltrada = listaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(filtro.ToUpper()));
+                //}
 
-                else if (filtro.Length > 1 && criterio.Equals("Marca"))
-                {
-                    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString().ToUpper().Contains(filtro.ToUpper()));
-                }
+                //else if (filtro.Length > 1 && criterio.Equals("Nombre"))
+                //{
+                //    listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+                //}
 
-                else if (filtro.Length > 1 && criterio.Equals("Precio"))
-                {
-                    listaFiltrada = listaArticulos.FindAll(x => x.Precio.ToString().ToUpper().Contains(filtro.ToUpper()));
-                }
+                //else if (filtro.Length > 1 && criterio.Equals("Marca"))
+                //{
+                //    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString().ToUpper().Contains(filtro.ToUpper()));
+                //}
+
+                //else if (filtro.Length > 1 && criterio.Equals("Precio"))
+                //{
+                //    listaFiltrada = listaArticulos.FindAll(x => x.Precio.ToString().ToUpper().Contains(filtro.ToUpper()));
+                //}
 
                 else
                 {
@@ -361,8 +412,11 @@ namespace presentacion
                 btnFiltrar.Visible = false;
                 btnLimpiarFiltro.Visible = false;
 
-                lblCampo.Visible = true;
-                cbCampo.Visible = true;
+                //lblCampo.Visible = true;
+                //cbCampo.Visible = true;
+
+                lblCampo.Visible = false;
+                cbCampo.Visible = false;
 
                 lblFiltroBR.Visible = true;
                 tbFiltroBR.Visible = true;
@@ -374,8 +428,8 @@ namespace presentacion
                 tbFiltro.Visible = false;
 
                 gbFiltros.Location = new System.Drawing.Point(161, 30);
-                lblCampo.Location = new System.Drawing.Point(162, 80);
-                cbCampo.Location = new System.Drawing.Point(204, 75);
+                //lblCampo.Location = new System.Drawing.Point(162, 80);
+                //cbCampo.Location = new System.Drawing.Point(204, 75);
                 lblFiltroBR.Location = new System.Drawing.Point(356, 80);
                 tbFiltroBR.Location = new System.Drawing.Point(387, 75);
                 //agregar el resto de movimientos, ocultamiento.

@@ -71,6 +71,7 @@
             // tbCodigo
             // 
             this.tbCodigo.Location = new System.Drawing.Point(166, 75);
+            this.tbCodigo.MaxLength = 50;
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(172, 20);
             this.tbCodigo.TabIndex = 2;
@@ -78,6 +79,7 @@
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(166, 109);
+            this.tbNombre.MaxLength = 50;
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(172, 20);
             this.tbNombre.TabIndex = 4;
@@ -102,6 +104,7 @@
             // 
             // cbMarca
             // 
+            this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(166, 177);
             this.cbMarca.Name = "cbMarca";
@@ -110,6 +113,7 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(166, 212);
             this.cbCategoria.Name = "cbCategoria";
@@ -144,6 +148,7 @@
             // tbDescripcion
             // 
             this.tbDescripcion.Location = new System.Drawing.Point(166, 281);
+            this.tbDescripcion.MaxLength = 150;
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(172, 59);
@@ -181,6 +186,7 @@
             // tbUrlImagen
             // 
             this.tbUrlImagen.Location = new System.Drawing.Point(166, 143);
+            this.tbUrlImagen.MaxLength = 1000;
             this.tbUrlImagen.Name = "tbUrlImagen";
             this.tbUrlImagen.Size = new System.Drawing.Size(172, 20);
             this.tbUrlImagen.TabIndex = 17;

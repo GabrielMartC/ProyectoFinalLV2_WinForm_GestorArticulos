@@ -11,12 +11,11 @@ namespace negocio
 {
     public class ArticuloNegocio
     {
-        public void mapearArticulo(SqlDataReader lector, List<Articulo>listaArticulos) 
+        public void setearDatosArticulo(SqlDataReader lector, List<Articulo>listaArticulos) 
             //toma los datos de la DB y los incluye en un objeto Articulo
         {
             try
             {
-                //Articulo articuloMapeado = new Articulo();
                 while (lector.Read())
                 {
                     Articulo articulo = new Articulo();
@@ -39,7 +38,6 @@ namespace negocio
 
                     listaArticulos.Add(articulo);
                 }
-                //return articulo;
             }
             catch (Exception ex)
             {
@@ -59,7 +57,7 @@ namespace negocio
                 datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
 
-                mapearArticulo(datos.Lector, listaArticulos);
+                setearDatosArticulo(datos.Lector, listaArticulos);
                 datos.cerrarConexion();
 
                 return listaArticulos;
@@ -189,29 +187,7 @@ namespace negocio
                 datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
 
-                mapearArticulo(datos.Lector, listaArticulos);
-                //while (datos.Lector.Read()) //esto esta repetido, podria mejorarse...
-                //{
-                //    Articulo articulo = new Articulo();
-
-                //    articulo.Id = (int)datos.Lector["Id"];
-                //    articulo.Codigo = (string)datos.Lector["Codigo"];
-                //    articulo.Nombre = (string)datos.Lector["Nombre"];
-                //    articulo.Descripcion = (string)datos.Lector["Descripcion"];
-
-                //    articulo.Marca = new Marca();
-                //    articulo.Marca.Id = (int)datos.Lector["IdMarca"];
-                //    articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
-
-                //    articulo.Categoria = new Categoria();
-                //    articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
-                //    articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
-
-                //    articulo.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-                //    articulo.Precio = (decimal)datos.Lector["Precio"];
-
-                //    listaArticulos.Add(articulo); 
-                //}
+                setearDatosArticulo(datos.Lector, listaArticulos);
                 return listaArticulos; 
             }
             catch (Exception ex)

@@ -134,6 +134,7 @@
             // tbFiltroBR
             // 
             this.tbFiltroBR.Location = new System.Drawing.Point(277, 7);
+            this.tbFiltroBR.MaxLength = 50;
             this.tbFiltroBR.Name = "tbFiltroBR";
             this.tbFiltroBR.Size = new System.Drawing.Size(121, 20);
             this.tbFiltroBR.TabIndex = 31;
@@ -142,11 +143,11 @@
             // lblFiltroBR
             // 
             this.lblFiltroBR.AutoSize = true;
-            this.lblFiltroBR.Location = new System.Drawing.Point(246, 12);
+            this.lblFiltroBR.Location = new System.Drawing.Point(181, 10);
             this.lblFiltroBR.Name = "lblFiltroBR";
-            this.lblFiltroBR.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltroBR.Size = new System.Drawing.Size(93, 13);
             this.lblFiltroBR.TabIndex = 30;
-            this.lblFiltroBR.Text = "Filtro";
+            this.lblFiltroBR.Text = "Filtro (por Nombre)";
             // 
             // btnFiltrar
             // 
@@ -176,6 +177,7 @@
             // 
             // cbCriterio
             // 
+            this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCriterio.FormattingEnabled = true;
             this.cbCriterio.Location = new System.Drawing.Point(277, 33);
             this.cbCriterio.Name = "cbCriterio";
@@ -193,6 +195,7 @@
             // 
             // cbCampo
             // 
+            this.cbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCampo.FormattingEnabled = true;
             this.cbCampo.Location = new System.Drawing.Point(94, 33);
             this.cbCampo.Name = "cbCampo";
@@ -272,8 +275,12 @@
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(164, 100);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersVisible = false;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(481, 431);
             this.dgvArticulos.TabIndex = 4;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);

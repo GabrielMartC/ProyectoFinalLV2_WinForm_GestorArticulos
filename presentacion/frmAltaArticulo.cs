@@ -126,10 +126,20 @@ namespace presentacion
                 articulo.Precio = decimal.Parse(tbPrecio.Text);
                 articulo.Descripcion = tbDescripcion.Text;
 
+
+                //validador aca
+                if(Helper.ValidacionAltaArticulo(tbCodigo, tbNombre, tbPrecio))
+                {
+                    MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                    return; 
+                }
+
                 if (articulo.Id != 0)
                 {
                     articuloNegocio.modificar(articulo);
                     MessageBox.Show("Modificado exitosamente!");
+
+
                 }
                 else
                 {
@@ -144,9 +154,17 @@ namespace presentacion
             }
             catch (Exception ex)
             {
+                if (ex is System.FormatException) //solucion 1: si Precio esta vacio
+                {
+                    MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                }
+                else
+                {
+                    MessageBox.Show(ex.ToString());
+                }
 
-                MessageBox.Show(ex.ToString());
             }
+            
 
         }
 
