@@ -51,14 +51,14 @@
             this.pbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.strpPrincipal = new System.Windows.Forms.StatusStrip();
+            this.sstrpPrincipal = new System.Windows.Forms.StatusStrip();
             this.sstrlabelPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelBotones.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             this.gbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            this.strpPrincipal.SuspendLayout();
+            this.sstrpPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -154,7 +154,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(573, 70);
+            this.btnFiltrar.Location = new System.Drawing.Point(573, 73);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
             this.btnFiltrar.TabIndex = 29;
@@ -217,7 +217,7 @@
             // 
             // btnLimpiarFiltro
             // 
-            this.btnLimpiarFiltro.Location = new System.Drawing.Point(573, 42);
+            this.btnLimpiarFiltro.Location = new System.Drawing.Point(573, 48);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(94, 23);
             this.btnLimpiarFiltro.TabIndex = 22;
@@ -264,7 +264,7 @@
             this.tbDescripcion.Location = new System.Drawing.Point(651, 408);
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(222, 123);
+            this.tbDescripcion.Size = new System.Drawing.Size(222, 98);
             this.tbDescripcion.TabIndex = 6;
             // 
             // pbImagenArticulo
@@ -284,7 +284,7 @@
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersVisible = false;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(481, 431);
+            this.dgvArticulos.Size = new System.Drawing.Size(481, 406);
             this.dgvArticulos.TabIndex = 4;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
@@ -292,24 +292,24 @@
             // 
             this.panelPrincipal.Location = new System.Drawing.Point(164, 100);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(709, 240);
+            this.panelPrincipal.Size = new System.Drawing.Size(709, 431);
             this.panelPrincipal.TabIndex = 8;
             // 
-            // strpPrincipal
+            // sstrpPrincipal
             // 
-            this.strpPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sstrpPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sstrlabelPrincipal});
-            this.strpPrincipal.Location = new System.Drawing.Point(164, 509);
-            this.strpPrincipal.Name = "strpPrincipal";
-            this.strpPrincipal.Size = new System.Drawing.Size(709, 22);
-            this.strpPrincipal.TabIndex = 9;
-            this.strpPrincipal.Text = "statusStrip1";
+            this.sstrpPrincipal.Location = new System.Drawing.Point(164, 509);
+            this.sstrpPrincipal.Name = "sstrpPrincipal";
+            this.sstrpPrincipal.Size = new System.Drawing.Size(709, 22);
+            this.sstrpPrincipal.TabIndex = 9;
+            this.sstrpPrincipal.Text = "statusStrip1";
             // 
             // sstrlabelPrincipal
             // 
             this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
             this.sstrlabelPrincipal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sstrlabelPrincipal.Size = new System.Drawing.Size(663, 17);
+            this.sstrlabelPrincipal.Size = new System.Drawing.Size(694, 17);
             this.sstrlabelPrincipal.Spring = true;
             this.sstrlabelPrincipal.Text = "toolStripStatusLabel1";
             this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -319,10 +319,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(873, 531);
-            this.Controls.Add(this.strpPrincipal);
             this.Controls.Add(this.panelPrincipal);
+            this.Controls.Add(this.sstrpPrincipal);
             this.Controls.Add(this.panelFiltros);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.pbImagenArticulo);
@@ -339,8 +339,8 @@
             this.gbFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            this.strpPrincipal.ResumeLayout(false);
-            this.strpPrincipal.PerformLayout();
+            this.sstrpPrincipal.ResumeLayout(false);
+            this.sstrpPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +371,7 @@
         private System.Windows.Forms.PictureBox pbImagenArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.StatusStrip strpPrincipal;
+        private System.Windows.Forms.StatusStrip sstrpPrincipal;
         private System.Windows.Forms.ToolStripStatusLabel sstrlabelPrincipal;
     }
 }

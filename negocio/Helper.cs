@@ -66,18 +66,37 @@ namespace negocio
             }
         }
 
-        //public static void configurarTick(Timer timer)
+        //public static void configurarTimer(Timer timer)
         //{
         //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+        //    timer.Tick += timer_tick; ////el problema es esto, habria que habilitar el evento desde aca
+        //    timer.Start();
+        //}
+
+
+        //private static void timer_tick(object sender, EventArgs e, ToolStripStatusLabel label, Timer timer)
+        //{
+        //    label.Text = string.Empty;
+        //    timer.Stop();
+        //}
+
+        //public static void ConfigurarTimer(Timer timer, ToolStripStatusLabel label)
+        //{
+        //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+        //    timer.Tag = (label, timer); // Almacena los parámetros adicionales en el Tag
         //    timer.Tick += Timer_Tick;
         //    timer.Start();
         //}
 
-        //private static void Timer_Tick(object sender, EventArgs e) // limpar el texto del sstrlabelPrincipal después de 10 segundos
+        //private static void Timer_Tick(object sender, EventArgs e)
         //{
-        //    sstrlabelPrincipal.Text = string.Empty;
-        //    timer.Stop();
+        //    if (sender is Timer timer && timer.Tag is (ToolStripStatusLabel label, Timer _))
+        //    {
+        //        label.Text = string.Empty;
+        //        timer.Stop();
+        //    }
         //}
+
 
         //public static bool validarFiltro(ComboBox campo, ComboBox criterio, ToolStripStatusLabel label, TextBox filtro)
         //{
@@ -106,7 +125,7 @@ namespace negocio
         //            label.Text = "Debes cargar el filtro para numericos...";
         //            return true;
         //        }
-                              
+
 
         //    }
         //    return false; //todo ok

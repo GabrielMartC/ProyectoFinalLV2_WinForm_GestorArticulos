@@ -46,7 +46,10 @@
             this.tbUrlImagen = new System.Windows.Forms.TextBox();
             this.lblUrlImagen = new System.Windows.Forms.Label();
             this.pbImagenAlta = new System.Windows.Forms.PictureBox();
+            this.sstrpAltaArticulo = new System.Windows.Forms.StatusStrip();
+            this.sstrlabelPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenAlta)).BeginInit();
+            this.sstrpAltaArticulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -144,7 +147,6 @@
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(172, 20);
             this.tbPrecio.TabIndex = 10;
-            //this.tbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrecio_KeyPress);
             // 
             // tbDescripcion
             // 
@@ -210,12 +212,31 @@
             this.pbImagenAlta.TabIndex = 18;
             this.pbImagenAlta.TabStop = false;
             // 
+            // sstrpAltaArticulo
+            // 
+            this.sstrpAltaArticulo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sstrlabelPrincipal});
+            this.sstrpAltaArticulo.Location = new System.Drawing.Point(0, 412);
+            this.sstrpAltaArticulo.Name = "sstrpAltaArticulo";
+            this.sstrpAltaArticulo.Size = new System.Drawing.Size(724, 22);
+            this.sstrpAltaArticulo.TabIndex = 19;
+            this.sstrpAltaArticulo.Text = "statusStrip1";
+            // 
+            // sstrlabelPrincipal
+            // 
+            this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
+            this.sstrlabelPrincipal.Size = new System.Drawing.Size(678, 17);
+            this.sstrlabelPrincipal.Spring = true;
+            this.sstrlabelPrincipal.Text = "toolStripStatusLabel2";
+            this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 434);
+            this.Controls.Add(this.sstrpAltaArticulo);
             this.Controls.Add(this.pbImagenAlta);
             this.Controls.Add(this.tbUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
@@ -239,6 +260,8 @@
             this.Text = "frmAltaArticulo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenAlta)).EndInit();
+            this.sstrpAltaArticulo.ResumeLayout(false);
+            this.sstrpAltaArticulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +287,7 @@
         private System.Windows.Forms.TextBox tbUrlImagen;
         private System.Windows.Forms.Label lblUrlImagen;
         private System.Windows.Forms.PictureBox pbImagenAlta;
+        private System.Windows.Forms.StatusStrip sstrpAltaArticulo;
+        private System.Windows.Forms.ToolStripStatusLabel sstrlabelPrincipal;
     }
 }

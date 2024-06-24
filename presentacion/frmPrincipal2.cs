@@ -28,7 +28,7 @@ namespace presentacion
             timer = new Timer();
             timer.Interval = 10000; // 10000 milisegundos = 10 segundos
             timer.Tick += Timer_Tick;
-            timer.Start();
+            //timer.Start();
         }
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
@@ -168,6 +168,9 @@ namespace presentacion
         {
             try
             {
+                gbFiltros.Visible = false;
+                ocultarSeccionFiltrar();
+
                 panelPrincipal.Visible = true;
                 loadForms(new frmAltaArticulo());
 
@@ -187,6 +190,9 @@ namespace presentacion
         {
             try
             {
+                gbFiltros.Visible = true;
+                resetearRadioButtons();
+
                 //loadForms(new frmListadoArticulo());
                 panelPrincipal.Visible = false;
 
@@ -211,6 +217,9 @@ namespace presentacion
         {
             try
             {
+                gbFiltros.Visible = false;
+                ocultarSeccionFiltrar();
+
                 //Articulo articuloSeleccionado;
                 //articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;        
                 panelPrincipal.Visible = true;
@@ -340,14 +349,16 @@ namespace presentacion
             if (cbCampo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
             {
                 //MessageBox.Show("Por favor, seleccione el campo para filtrar");
-                sstrlabelPrincipal.Text = "Por favor, seleccione el campo para filtrar";
+                timer.Start();
+                sstrlabelPrincipal.Text = "Por favor, seleccione un campo para filtrar";
                 return true;
             }
 
             if (cbCriterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
             {
                 //MessageBox.Show("Por favor, seleccione el criterio para filtrar");
-                sstrlabelPrincipal.Text = "Por favor, seleccione el criterio para filtrar";
+                timer.Start();
+                sstrlabelPrincipal.Text = "Por favor, seleccione un criterio para filtrar";
                 return true;
             }
 
@@ -358,7 +369,8 @@ namespace presentacion
                 //si el text box del filtro avanzado esta vacio o es nulo...                                        
                 {
                     //MessageBox.Show("Debes cargar el filtro para numericos...");
-                    sstrlabelPrincipal.Text = "Debes cargar el filtro para numericos...";
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "Por favor, cargue el filtro para numericos";
                     return true;
                 }
                 //if (!(Helper.SoloDecimal(tbFiltro.Text))) //si no cargaste solo numeros...
@@ -428,7 +440,7 @@ namespace presentacion
                 cbCampo.ResetText();
                 cbCriterio.ResetText();
 
-                timer.Start();
+                //timer.Start();
 
                 cargarDataGridView();
             }
@@ -460,11 +472,11 @@ namespace presentacion
                 lblFiltro.Visible = false;
                 tbFiltro.Visible = false;
 
-                gbFiltros.Location = new System.Drawing.Point(161, 30);
+                gbFiltros.Location = new System.Drawing.Point(55, 30);
                 //lblCampo.Location = new System.Drawing.Point(162, 80);
                 //cbCampo.Location = new System.Drawing.Point(204, 75);
-                lblFiltroBR.Location = new System.Drawing.Point(356, 80);
-                tbFiltroBR.Location = new System.Drawing.Point(387, 75);
+                lblFiltroBR.Location = new System.Drawing.Point(55, 80);
+                tbFiltroBR.Location = new System.Drawing.Point(160, 75);
                 //agregar el resto de movimientos, ocultamiento.
             }
             catch (Exception ex)
@@ -492,16 +504,16 @@ namespace presentacion
                 lblFiltro.Visible = true;
                 tbFiltro.Visible = true;
 
-                gbFiltros.Location = new System.Drawing.Point(161, 30);
+                gbFiltros.Location = new System.Drawing.Point(55, 30);
 
-                lblCampo.Location = new System.Drawing.Point(162, 80);
-                cbCampo.Location = new System.Drawing.Point(204, 75);
+                lblCampo.Location = new System.Drawing.Point(52, 80);
+                cbCampo.Location = new System.Drawing.Point(94, 75);
 
-                lblCriterio.Location = new System.Drawing.Point(350, 80);
-                cbCriterio.Location = new System.Drawing.Point(387, 75);
+                lblCriterio.Location = new System.Drawing.Point(235, 80);
+                cbCriterio.Location = new System.Drawing.Point(277, 75);
 
-                lblFiltro.Location = new System.Drawing.Point(524, 80);
-                tbFiltro.Location = new System.Drawing.Point(555, 75);
+                lblFiltro.Location = new System.Drawing.Point(415, 80);
+                tbFiltro.Location = new System.Drawing.Point(446, 75);
 
             }
             catch (Exception ex)
@@ -513,7 +525,18 @@ namespace presentacion
         private void Timer_Tick(object sender, EventArgs e) // limpar el texto del sstrlabelPrincipal después de 10 segundos
         {
             sstrlabelPrincipal.Text = string.Empty;
-            //timer.Stop();
+            timer.Stop();
+        }
+
+        private void resetearRadioButtons()
+        {
+            if(rbFiltroRapido.Checked == true || rbFiltroAvanzado.Checked == true)
+            {
+                rbFiltroRapido.Checked = false;
+                rbFiltroAvanzado.Checked = false;
+                gbFiltros.Location = new System.Drawing.Point(55, 52);
+                ocultarSeccionFiltrar();
+            }
         }
     }
 }

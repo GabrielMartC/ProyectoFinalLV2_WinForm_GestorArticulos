@@ -15,15 +15,31 @@ namespace presentacion
     public partial class frmAltaArticulo : Form
     {
         private Articulo articulo = null;
+        private Timer timer;
 
         public frmAltaArticulo() //AGREGAR
         {
             InitializeComponent();
+
+            //// Configurar el Timer
+            //timer = new Timer();
+            //timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+            //timer.Tick += Timer_Tick;
+            ////timer.Start();
+
+            //Helper.ConfigurarTimer(timer,sstrlabelPrincipal);
         }
 
         public frmAltaArticulo(Articulo articulo) //MODIFICAR
         {
             InitializeComponent();
+
+            //// Configurar el Timer
+            //timer = new Timer();
+            //timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+            //timer.Tick += Timer_Tick;
+            ////timer.Start();
+
             this.articulo = articulo; //articulo no es null
             lblTitulo.Text = "Modificar Articulo";
             btnAgregar.Text = "Modificar";
@@ -36,6 +52,13 @@ namespace presentacion
             try
             {
                 //al iniciar...
+
+                // Configurar el Timer
+                timer = new Timer();
+                timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+                timer.Tick += Timer_Tick;
+                //timer.Start();
+
                 cargarComboBoxes();
 
                 if (articulo != null)
@@ -133,22 +156,27 @@ namespace presentacion
                 //validador aca
                 if(Helper.ValidacionAltaArticulo(tbCodigo, tbNombre, tbPrecio))
                 {
-                    MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                    //MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio";
                     return; 
                 }
 
                 if (articulo.Id != 0)
                 {
                     articuloNegocio.modificar(articulo);
-                    MessageBox.Show("Modificado exitosamente!");
-
+                    //MessageBox.Show("Modificado exitosamente!");
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "Modificado exitosamente!";
 
                 }
                 else
                 {
                     articuloNegocio.agregarNuevo(articulo);
-                    MessageBox.Show("Agregado exitosamente!");
-                    
+                    //MessageBox.Show("Agregado exitosamente!");
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "Agregado exitosamente!";
+
                     limpiarTodo();
                 }
 
@@ -159,12 +187,15 @@ namespace presentacion
             {
                 if (ex is System.FormatException) //si Precio esta vacio o no es un nro
                 {
-                    MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                    //MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio";
                 }
                 else
                 {
                     MessageBox.Show(ex.ToString());
                 }
+
 
             }
             
@@ -189,6 +220,12 @@ namespace presentacion
             {
                 cargarDatosArticuloSeleccionado(); //para UPDATE
             }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e) // limpar el texto del sstrlabelPrincipal después de 10 segundos
+        {
+            sstrlabelPrincipal.Text = string.Empty;
+            timer.Stop();
         }
 
         //private void tbPrecio_KeyPress(object sender, KeyPressEventArgs e) 
