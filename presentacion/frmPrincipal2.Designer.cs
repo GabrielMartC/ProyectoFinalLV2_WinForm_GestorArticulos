@@ -51,11 +51,14 @@
             this.pbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.strpPrincipal = new System.Windows.Forms.StatusStrip();
+            this.sstrlabelPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelBotones.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             this.gbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.strpPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -287,11 +290,30 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(164, 100);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(709, 431);
+            this.panelPrincipal.Size = new System.Drawing.Size(709, 240);
             this.panelPrincipal.TabIndex = 8;
+            // 
+            // strpPrincipal
+            // 
+            this.strpPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sstrlabelPrincipal});
+            this.strpPrincipal.Location = new System.Drawing.Point(164, 509);
+            this.strpPrincipal.Name = "strpPrincipal";
+            this.strpPrincipal.Size = new System.Drawing.Size(709, 22);
+            this.strpPrincipal.TabIndex = 9;
+            this.strpPrincipal.Text = "statusStrip1";
+            // 
+            // sstrlabelPrincipal
+            // 
+            this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
+            this.sstrlabelPrincipal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.sstrlabelPrincipal.Size = new System.Drawing.Size(663, 17);
+            this.sstrlabelPrincipal.Spring = true;
+            this.sstrlabelPrincipal.Text = "toolStripStatusLabel1";
+            this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sstrlabelPrincipal.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // frmPrincipal2
             // 
@@ -299,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(873, 531);
+            this.Controls.Add(this.strpPrincipal);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelFiltros);
             this.Controls.Add(this.tbDescripcion);
@@ -316,6 +339,8 @@
             this.gbFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.strpPrincipal.ResumeLayout(false);
+            this.strpPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +371,7 @@
         private System.Windows.Forms.PictureBox pbImagenArticulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.StatusStrip strpPrincipal;
+        private System.Windows.Forms.ToolStripStatusLabel sstrlabelPrincipal;
     }
 }

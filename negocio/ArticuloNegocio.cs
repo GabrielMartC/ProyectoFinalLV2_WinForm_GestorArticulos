@@ -141,7 +141,7 @@ namespace negocio
                         }
                         break;
 
-                    case "Categoria":
+                    case "Categoría":
                         switch (criterio)
                         {
                             case "Comenza con":

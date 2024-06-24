@@ -65,5 +65,52 @@ namespace negocio
                 e.Handled = true;
             }
         }
+
+        //public static void configurarTick(Timer timer)
+        //{
+        //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+        //    timer.Tick += Timer_Tick;
+        //    timer.Start();
+        //}
+
+        //private static void Timer_Tick(object sender, EventArgs e) // limpar el texto del sstrlabelPrincipal después de 10 segundos
+        //{
+        //    sstrlabelPrincipal.Text = string.Empty;
+        //    timer.Stop();
+        //}
+
+        //public static bool validarFiltro(ComboBox campo, ComboBox criterio, ToolStripStatusLabel label, TextBox filtro)
+        //{
+        //    if (campo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
+        //    {
+        //        label.Text = "Por favor, seleccione el campo para filtrar";
+        //        return true;
+        //    }
+
+        //    if (criterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
+        //    {
+        //        label.Text = "Por favor, seleccione el criterio para filtrar";
+        //        return true;
+        //    }
+
+        //    if(campo.SelectedItem.ToString() == "Código") { }
+        //    if (campo.SelectedItem.ToString() == "Nombre") { }
+        //    if (campo.SelectedItem.ToString() == "Marca") { }
+        //    if (campo.SelectedItem.ToString() == "Categoría") { }
+        //    if (campo.SelectedItem.ToString() == "Precio") //filtro para Precio
+        //    {
+        //        if (string.IsNullOrEmpty(filtro.Text))
+        //        //si el text box del filtro avanzado esta vacio o es nulo...                                        
+        //        {
+        //            //MessageBox.Show("Debes cargar el filtro para numericos...");
+        //            label.Text = "Debes cargar el filtro para numericos...";
+        //            return true;
+        //        }
+                              
+
+        //    }
+        //    return false; //todo ok
+        //}
+
     }
 }

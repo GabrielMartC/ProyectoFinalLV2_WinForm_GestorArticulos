@@ -19,9 +19,16 @@ namespace presentacion
     {
         private List<Articulo> listaArticulos;
         private Articulo articuloSeleccionado;
+        private Timer timer;
         public frmPrincipal2()
         {
             InitializeComponent();
+
+            // Configurar el Timer
+            timer = new Timer();
+            timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
@@ -332,13 +339,15 @@ namespace presentacion
         {
             if (cbCampo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
             {
-                MessageBox.Show("Por favor, seleccione el campo para filtrar");
+                //MessageBox.Show("Por favor, seleccione el campo para filtrar");
+                sstrlabelPrincipal.Text = "Por favor, seleccione el campo para filtrar";
                 return true;
             }
 
             if (cbCriterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
             {
-                MessageBox.Show("Por favor, seleccione el criterio para filtrar");
+                //MessageBox.Show("Por favor, seleccione el criterio para filtrar");
+                sstrlabelPrincipal.Text = "Por favor, seleccione el criterio para filtrar";
                 return true;
             }
 
@@ -348,7 +357,8 @@ namespace presentacion
                 if (string.IsNullOrEmpty(tbFiltro.Text))
                 //si el text box del filtro avanzado esta vacio o es nulo...                                        
                 {
-                    MessageBox.Show("Debes cargar el filtro para numericos...");
+                    //MessageBox.Show("Debes cargar el filtro para numericos...");
+                    sstrlabelPrincipal.Text = "Debes cargar el filtro para numericos...";
                     return true;
                 }
                 //if (!(Helper.SoloDecimal(tbFiltro.Text))) //si no cargaste solo numeros...
@@ -417,6 +427,8 @@ namespace presentacion
                 tbFiltroBR.ResetText();
                 cbCampo.ResetText();
                 cbCriterio.ResetText();
+
+                timer.Start();
 
                 cargarDataGridView();
             }
@@ -496,6 +508,12 @@ namespace presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e) // limpar el texto del sstrlabelPrincipal después de 10 segundos
+        {
+            sstrlabelPrincipal.Text = string.Empty;
+            //timer.Stop();
         }
     }
 }

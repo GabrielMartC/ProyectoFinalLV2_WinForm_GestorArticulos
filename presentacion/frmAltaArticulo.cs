@@ -43,6 +43,7 @@ namespace presentacion
                     cargarDatosArticuloSeleccionado();
                 }
 
+                //permitir solo nro decimal en tbPrecio
                 tbPrecio.KeyPress += new KeyPressEventHandler(Helper.permitirSoloDecimal);
 
             }
@@ -156,7 +157,7 @@ namespace presentacion
             }
             catch (Exception ex)
             {
-                if (ex is System.FormatException) //solucion 1: si Precio esta vacio
+                if (ex is System.FormatException) //si Precio esta vacio o no es un nro
                 {
                     MessageBox.Show("No se puede agregar o modificar un articulo sin: Codigo, Nombre o Precio");
                 }
