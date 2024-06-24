@@ -30,18 +30,18 @@ namespace negocio
 
         //}
 
-        public static bool SoloNumeros(string text) //validacion solo numeros
-        {
-            foreach (char caracter in text)
-            {
-                if (!(char.IsNumber(caracter))) //si NO es numero...
-                {
-                    return false;
-                }
+        //public static bool SoloDecimal(string text) //validacion solo numeros
+        //{
+        //    foreach (char caracter in text)
+        //    {
+        //        if (!(char.IsNumber(caracter)) || !(caracter.Equals('.'))) //si NO es numero...
+        //        {
+        //            return false;
+        //        }
 
-            }
-            return true;
-        }
+        //    }
+        //    return true;
+        //}
 
         public static bool ValidacionAltaArticulo(TextBox codigo, TextBox nombre, TextBox precio)
         {
@@ -50,6 +50,20 @@ namespace negocio
                 return true; //algunos de los textBox estan vacios
             }
             return false;
+        }
+
+        public static void permitirSoloDecimal(object sender, KeyPressEventArgs e)
+        //evento que solo permite ingreso de numeros y un "." para separar decimal
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

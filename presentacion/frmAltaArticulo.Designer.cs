@@ -144,6 +144,7 @@
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(172, 20);
             this.tbPrecio.TabIndex = 10;
+            //this.tbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPrecio_KeyPress);
             // 
             // tbDescripcion
             // 

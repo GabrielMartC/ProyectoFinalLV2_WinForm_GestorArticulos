@@ -43,6 +43,8 @@ namespace presentacion
                     cargarDatosArticuloSeleccionado();
                 }
 
+                tbPrecio.KeyPress += new KeyPressEventHandler(Helper.permitirSoloDecimal);
+
             }
             catch (Exception ex)
             {
@@ -60,7 +62,7 @@ namespace presentacion
                 tbUrlImagen.Text = articulo.ImagenUrl;
                 cbMarca.SelectedValue = articulo.Marca.Id;
                 cbCategoria.SelectedValue = articulo.Categoria.Id;
-                tbPrecio.Text = articulo.Precio.ToString();
+                tbPrecio.Text = articulo.Precio.ToString("0.00"); //limita decimales
                 tbDescripcion.Text = articulo.Descripcion;
 
             }
@@ -188,6 +190,20 @@ namespace presentacion
             }
         }
 
-        
+        //private void tbPrecio_KeyPress(object sender, KeyPressEventArgs e) 
+        ////solo permite ingreso de numeros y un "." para separar decimal
+        //{
+        //    // Verificar si el carácter es un número, un punto, o una tecla de control
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+        //    {
+        //        e.Handled = true;
+        //    }
+
+        //    // Verificar si ya hay un punto en el TextBox, y evitar que se ingrese otro punto
+        //    if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+        //    {
+        //        e.Handled = true;
+        //    }
+        //}
     }
 }

@@ -18,6 +18,7 @@ namespace presentacion
     public partial class frmPrincipal2 : Form
     {
         private List<Articulo> listaArticulos;
+        private Articulo articuloSeleccionado;
         public frmPrincipal2()
         {
             InitializeComponent();
@@ -29,7 +30,6 @@ namespace presentacion
             //al iniciar, se oculta el panel para cargar formAltaArticulo
             panelPrincipal.Visible = false; 
             
-
             //1ro cargarmos los elementos para el datagridview
             cargarDataGridView();
 
@@ -37,7 +37,7 @@ namespace presentacion
 
             ocultarSeccionFiltrar();
 
-
+            articuloSeleccionado = listaArticulos[0]; //articulo seleccionado por defecto
         }
 
         private void ocultarSeccionFiltrar()
@@ -107,6 +107,9 @@ namespace presentacion
                 cargarDescripcion(listaArticulos[0].Descripcion);
 
                 ocultarColumnas();
+
+                //limitar decimales
+                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.00";
 
             }
             catch (Exception ex)
@@ -201,8 +204,8 @@ namespace presentacion
         {
             try
             {
-                Articulo articuloSeleccionado;
-                articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                //Articulo articuloSeleccionado;
+                //articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;        
                 panelPrincipal.Visible = true;
                 loadForms(new frmAltaArticulo(articuloSeleccionado));
 
@@ -220,7 +223,7 @@ namespace presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado;
+            //Articulo articuloSeleccionado;
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
             try
@@ -228,7 +231,7 @@ namespace presentacion
                 DialogResult respuesta = MessageBox.Show("De verdad desea eliminarlo?","Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
-                    articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    //articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                     articuloNegocio.eliminar(articuloSeleccionado.Id);
                 
                 }
@@ -247,9 +250,14 @@ namespace presentacion
             {
                 if (dgvArticulos.CurrentRow != null)
                 {
-                    Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    Helper.CargarImagen(seleccionado.ImagenUrl, pbImagenArticulo);
-                    cargarDescripcion(seleccionado.Descripcion);
+                    //Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    //Helper.CargarImagen(seleccionado.ImagenUrl, pbImagenArticulo);
+                    //cargarDescripcion(seleccionado.Descripcion);
+
+                    //cambia si y solo si se hace selecciona otro
+                    articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    Helper.CargarImagen(articuloSeleccionado.ImagenUrl, pbImagenArticulo);
+                    cargarDescripcion(articuloSeleccionado.Descripcion);
                 }
 
             }
@@ -270,6 +278,10 @@ namespace presentacion
                     cbCriterio.Items.Add("Mayor a");
                     cbCriterio.Items.Add("Menor a");
                     cbCriterio.Items.Add("Igual a");
+
+                    //habilita evento solo nro decimal
+                    tbFiltro.KeyPress += new KeyPressEventHandler(Helper.permitirSoloDecimal);
+
                 }
                 else //se va a seleccionar un string (nombre o descripcion)
                 {
@@ -277,7 +289,14 @@ namespace presentacion
                     cbCriterio.Items.Add("Comenza con");
                     cbCriterio.Items.Add("Termina con");
                     cbCriterio.Items.Add("Contiene");
+
+                    //deshabilita evento solo nro decimal
+                    tbFiltro.KeyPress -= new KeyPressEventHandler(Helper.permitirSoloDecimal);
                 }
+
+                tbFiltro.Clear();
+
+
             }
             catch (Exception ex)
             {
@@ -299,6 +318,8 @@ namespace presentacion
                 string criterio = cbCriterio.SelectedItem.ToString();
                 string filtro = tbFiltro.Text;
                 dgvArticulos.DataSource = negocio.listarFiltroAvanzado(campo, criterio, filtro);
+
+
 
             }
             catch (Exception ex)
@@ -330,11 +351,11 @@ namespace presentacion
                     MessageBox.Show("Debes cargar el filtro para numericos...");
                     return true;
                 }
-                if (!(Helper.SoloNumeros(tbFiltro.Text))) //si no cargaste solo numeros...
-                {
-                    MessageBox.Show("Solo nros para ingresar por un campo numerico...");
-                    return true;
-                }
+                //if (!(Helper.SoloDecimal(tbFiltro.Text))) //si no cargaste solo numeros...
+                //{
+                //    MessageBox.Show("Solo nros para ingresar por un campo numerico...");
+                //    return true;
+                //}                
 
             }
             return false; //todo ok
@@ -476,7 +497,5 @@ namespace presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        
     }
 }
