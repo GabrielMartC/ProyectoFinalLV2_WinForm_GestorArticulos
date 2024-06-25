@@ -1,4 +1,6 @@
-﻿namespace presentacion
+﻿using System;
+
+namespace presentacion
 {
     partial class frmPrincipal2
     {
@@ -28,6 +30,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -63,7 +68,7 @@
             // 
             // panelBotones
             // 
-            this.panelBotones.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.panelBotones.Controls.Add(this.btnListar);
             this.panelBotones.Controls.Add(this.btnEliminar);
             this.panelBotones.Controls.Add(this.btnModificar);
@@ -76,47 +81,80 @@
             // 
             // btnListar
             // 
+            this.btnListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnListar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.White;
             this.btnListar.Location = new System.Drawing.Point(6, 130);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(155, 50);
             this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "Ver Articulos";
+            this.btnListar.Text = "VER ARTICULOS";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnListar.MouseEnter += new System.EventHandler(this.btnListar_MouseEnter);
+            this.btnListar.MouseLeave += new System.EventHandler(this.btnListar_MouseLeave);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(4, 336);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(155, 50);
             this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseEnter += new System.EventHandler(this.btnEliminar_MouseEnter);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
             // 
             // btnModificar
             // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(4, 243);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(155, 50);
             this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.MouseEnter += new System.EventHandler(this.btnModificar_MouseEnter);
+            this.btnModificar.MouseLeave += new System.EventHandler(this.btnModificar_MouseLeave);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(4, 186);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(155, 50);
             this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "Nuevo";
+            this.btnAgregar.Text = "NUEVO";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
             // 
             // panelFiltros
             // 
-            this.panelFiltros.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.panelFiltros.Controls.Add(this.tbFiltroBR);
             this.panelFiltros.Controls.Add(this.lblFiltroBR);
             this.panelFiltros.Controls.Add(this.btnFiltrar);
@@ -131,7 +169,7 @@
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltros.Location = new System.Drawing.Point(164, 0);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(709, 100);
+            this.panelFiltros.Size = new System.Drawing.Size(715, 100);
             this.panelFiltros.TabIndex = 7;
             // 
             // tbFiltroBR
@@ -146,21 +184,31 @@
             // lblFiltroBR
             // 
             this.lblFiltroBR.AutoSize = true;
+            this.lblFiltroBR.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltroBR.ForeColor = System.Drawing.Color.White;
             this.lblFiltroBR.Location = new System.Drawing.Point(181, 10);
             this.lblFiltroBR.Name = "lblFiltroBR";
-            this.lblFiltroBR.Size = new System.Drawing.Size(93, 13);
+            this.lblFiltroBR.Size = new System.Drawing.Size(105, 13);
             this.lblFiltroBR.TabIndex = 30;
             this.lblFiltroBR.Text = "Filtro (por Nombre)";
             // 
             // btnFiltrar
             // 
+            this.btnFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnFiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnFiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar.Location = new System.Drawing.Point(573, 73);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
             this.btnFiltrar.TabIndex = 29;
-            this.btnFiltrar.Text = "Buscar";
+            this.btnFiltrar.Text = "BUSCAR";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            this.btnFiltrar.MouseEnter += new System.EventHandler(this.btnFiltrar_MouseEnter);
+            this.btnFiltrar.MouseLeave += new System.EventHandler(this.btnFiltrar_MouseLeave);
             // 
             // tbFiltro
             // 
@@ -172,9 +220,11 @@
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro.ForeColor = System.Drawing.Color.White;
             this.lblFiltro.Location = new System.Drawing.Point(415, 36);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltro.Size = new System.Drawing.Size(34, 13);
             this.lblFiltro.TabIndex = 27;
             this.lblFiltro.Text = "Filtro";
             // 
@@ -190,9 +240,11 @@
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterio.ForeColor = System.Drawing.Color.White;
             this.lblCriterio.Location = new System.Drawing.Point(235, 38);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(39, 13);
+            this.lblCriterio.Size = new System.Drawing.Size(45, 13);
             this.lblCriterio.TabIndex = 25;
             this.lblCriterio.Text = "Criterio";
             // 
@@ -209,21 +261,31 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
+            this.lblCampo.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo.ForeColor = System.Drawing.Color.White;
             this.lblCampo.Location = new System.Drawing.Point(52, 38);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(40, 13);
+            this.lblCampo.Size = new System.Drawing.Size(43, 13);
             this.lblCampo.TabIndex = 23;
             this.lblCampo.Text = "Campo";
             // 
             // btnLimpiarFiltro
             // 
+            this.btnLimpiarFiltro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnLimpiarFiltro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnLimpiarFiltro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnLimpiarFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarFiltro.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarFiltro.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarFiltro.Location = new System.Drawing.Point(573, 48);
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(94, 23);
             this.btnLimpiarFiltro.TabIndex = 22;
-            this.btnLimpiarFiltro.Text = "Limpiar Todo";
+            this.btnLimpiarFiltro.Text = "LIMPIAR TODO";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
+            this.btnLimpiarFiltro.MouseEnter += new System.EventHandler(this.btnLimpiarFiltro_MouseEnter);
+            this.btnLimpiarFiltro.MouseLeave += new System.EventHandler(this.btnLimpiarFiltro_MouseLeave);
             // 
             // gbFiltros
             // 
@@ -231,16 +293,18 @@
             this.gbFiltros.Controls.Add(this.rbFiltroRapido);
             this.gbFiltros.Location = new System.Drawing.Point(55, 52);
             this.gbFiltros.Name = "gbFiltros";
-            this.gbFiltros.Size = new System.Drawing.Size(216, 39);
+            this.gbFiltros.Size = new System.Drawing.Size(225, 39);
             this.gbFiltros.TabIndex = 21;
             this.gbFiltros.TabStop = false;
             // 
             // rbFiltroAvanzado
             // 
             this.rbFiltroAvanzado.AutoSize = true;
+            this.rbFiltroAvanzado.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFiltroAvanzado.ForeColor = System.Drawing.Color.White;
             this.rbFiltroAvanzado.Location = new System.Drawing.Point(112, 15);
             this.rbFiltroAvanzado.Name = "rbFiltroAvanzado";
-            this.rbFiltroAvanzado.Size = new System.Drawing.Size(98, 17);
+            this.rbFiltroAvanzado.Size = new System.Drawing.Size(105, 17);
             this.rbFiltroAvanzado.TabIndex = 2;
             this.rbFiltroAvanzado.TabStop = true;
             this.rbFiltroAvanzado.Text = "Filtro Avanzado";
@@ -250,9 +314,11 @@
             // rbFiltroRapido
             // 
             this.rbFiltroRapido.AutoSize = true;
+            this.rbFiltroRapido.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFiltroRapido.ForeColor = System.Drawing.Color.White;
             this.rbFiltroRapido.Location = new System.Drawing.Point(6, 15);
             this.rbFiltroRapido.Name = "rbFiltroRapido";
-            this.rbFiltroRapido.Size = new System.Drawing.Size(84, 17);
+            this.rbFiltroRapido.Size = new System.Drawing.Size(92, 17);
             this.rbFiltroRapido.TabIndex = 1;
             this.rbFiltroRapido.TabStop = true;
             this.rbFiltroRapido.Text = "Filtro Rapido";
@@ -261,6 +327,10 @@
             // 
             // tbDescripcion
             // 
+            this.tbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.tbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescripcion.ForeColor = System.Drawing.Color.White;
             this.tbDescripcion.Location = new System.Drawing.Point(651, 408);
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
@@ -269,6 +339,7 @@
             // 
             // pbImagenArticulo
             // 
+            this.pbImagenArticulo.BackColor = System.Drawing.Color.White;
             this.pbImagenArticulo.Location = new System.Drawing.Point(651, 99);
             this.pbImagenArticulo.Name = "pbImagenArticulo";
             this.pbImagenArticulo.Size = new System.Drawing.Size(222, 303);
@@ -277,8 +348,30 @@
             // 
             // dgvArticulos
             // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.EnableHeadersVisualStyles = false;
+            this.dgvArticulos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.dgvArticulos.Location = new System.Drawing.Point(164, 100);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
@@ -290,28 +383,31 @@
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.panelPrincipal.Location = new System.Drawing.Point(164, 100);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(709, 431);
+            this.panelPrincipal.Size = new System.Drawing.Size(715, 431);
             this.panelPrincipal.TabIndex = 8;
             // 
             // sstrpPrincipal
             // 
+            this.sstrpPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.sstrpPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sstrlabelPrincipal});
             this.sstrpPrincipal.Location = new System.Drawing.Point(164, 509);
             this.sstrpPrincipal.Name = "sstrpPrincipal";
-            this.sstrpPrincipal.Size = new System.Drawing.Size(709, 22);
+            this.sstrpPrincipal.Size = new System.Drawing.Size(715, 22);
             this.sstrpPrincipal.TabIndex = 9;
             this.sstrpPrincipal.Text = "statusStrip1";
             // 
             // sstrlabelPrincipal
             // 
+            this.sstrlabelPrincipal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.sstrlabelPrincipal.ForeColor = System.Drawing.Color.White;
             this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
             this.sstrlabelPrincipal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sstrlabelPrincipal.Size = new System.Drawing.Size(694, 17);
+            this.sstrlabelPrincipal.Size = new System.Drawing.Size(700, 17);
             this.sstrlabelPrincipal.Spring = true;
-            this.sstrlabelPrincipal.Text = "toolStripStatusLabel1";
             this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sstrlabelPrincipal.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -319,8 +415,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(873, 531);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.ClientSize = new System.Drawing.Size(879, 531);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.sstrpPrincipal);
             this.Controls.Add(this.panelFiltros);

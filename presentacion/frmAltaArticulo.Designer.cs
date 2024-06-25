@@ -206,6 +206,7 @@
             // 
             // pbImagenAlta
             // 
+            this.pbImagenAlta.BackColor = System.Drawing.Color.White;
             this.pbImagenAlta.Location = new System.Drawing.Point(377, 75);
             this.pbImagenAlta.Name = "pbImagenAlta";
             this.pbImagenAlta.Size = new System.Drawing.Size(232, 305);
@@ -225,7 +226,7 @@
             // sstrlabelPrincipal
             // 
             this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
-            this.sstrlabelPrincipal.Size = new System.Drawing.Size(678, 17);
+            this.sstrlabelPrincipal.Size = new System.Drawing.Size(709, 17);
             this.sstrlabelPrincipal.Spring = true;
             this.sstrlabelPrincipal.Text = "toolStripStatusLabel2";
             this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(724, 434);
             this.Controls.Add(this.sstrpAltaArticulo);
             this.Controls.Add(this.pbImagenAlta);

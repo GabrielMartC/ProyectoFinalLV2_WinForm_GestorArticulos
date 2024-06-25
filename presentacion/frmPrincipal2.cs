@@ -29,13 +29,14 @@ namespace presentacion
             timer.Interval = 10000; // 10000 milisegundos = 10 segundos
             timer.Tick += Timer_Tick;
             //timer.Start();
+
         }
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
         {
 
             //al iniciar, se oculta el panel para cargar formAltaArticulo
-            panelPrincipal.Visible = false; 
+            panelPrincipal.Visible = false;
             
             //1ro cargarmos los elementos para el datagridview
             cargarDataGridView();
@@ -45,6 +46,9 @@ namespace presentacion
             ocultarSeccionFiltrar();
 
             articuloSeleccionado = listaArticulos[0]; //articulo seleccionado por defecto
+
+            
+
         }
 
         private void ocultarSeccionFiltrar()
@@ -251,7 +255,8 @@ namespace presentacion
                     articuloNegocio.eliminar(articuloSeleccionado.Id);
                 
                 }
-                
+
+                btnEliminar.ForeColor = System.Drawing.Color.Red;
                 cargarDataGridView();
             }
             catch (Exception ex)
@@ -538,5 +543,78 @@ namespace presentacion
                 ocultarSeccionFiltrar();
             }
         }
+
+        private void btnListar_MouseEnter(object sender, EventArgs e)
+        {
+            btnListar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnListar_MouseLeave(object sender, EventArgs e)
+        {
+            btnListar.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            btnAgregar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnModificar_MouseEnter(object sender, EventArgs e)
+        {
+            btnModificar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnModificar_MouseLeave(object sender, EventArgs e)
+        {
+            btnModificar.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnEliminar_MouseEnter(object sender, EventArgs e)
+        {
+            btnEliminar.ForeColor = System.Drawing.Color.Red;
+        }
+
+        private void btnEliminar_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminar.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnLimpiarFiltro_MouseEnter(object sender, EventArgs e)
+        {
+            btnLimpiarFiltro.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnLimpiarFiltro_MouseLeave(object sender, EventArgs e)
+        {
+            btnLimpiarFiltro.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnFiltrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnFiltrar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnFiltrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnFiltrar.ForeColor = System.Drawing.Color.White;
+        }
+
+
+
+        //private void btnListar_MouseEnter(object sender, EventArgs e)
+        //{
+        //    btnListar.ForeColor = System.Drawing.Color.Black;
+        //}
+
+        //private void btnListar_MouseLeave(object sender, EventArgs e)
+        //{
+        //    btnListar.ForeColor = System.Drawing.Color.White;
+        //}
+
     }
 }
