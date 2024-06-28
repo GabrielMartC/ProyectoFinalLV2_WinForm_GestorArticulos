@@ -76,18 +76,20 @@
             // 
             // tbCodigo
             // 
+            this.tbCodigo.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigo.Location = new System.Drawing.Point(196, 58);
             this.tbCodigo.MaxLength = 50;
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(184, 20);
+            this.tbCodigo.Size = new System.Drawing.Size(184, 22);
             this.tbCodigo.TabIndex = 2;
             // 
             // tbNombre
             // 
+            this.tbNombre.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(196, 92);
             this.tbNombre.MaxLength = 50;
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(184, 20);
+            this.tbNombre.Size = new System.Drawing.Size(184, 22);
             this.tbNombre.TabIndex = 4;
             // 
             // lblNombre
@@ -115,6 +117,7 @@
             // cbMarca
             // 
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMarca.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(196, 160);
             this.cbMarca.Name = "cbMarca";
@@ -124,6 +127,7 @@
             // cbCategoria
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoria.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(196, 195);
             this.cbCategoria.Name = "cbCategoria";
@@ -154,13 +158,15 @@
             // 
             // tbPrecio
             // 
+            this.tbPrecio.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPrecio.Location = new System.Drawing.Point(196, 230);
             this.tbPrecio.Name = "tbPrecio";
-            this.tbPrecio.Size = new System.Drawing.Size(184, 20);
+            this.tbPrecio.Size = new System.Drawing.Size(184, 22);
             this.tbPrecio.TabIndex = 10;
             // 
             // tbDescripcion
             // 
+            this.tbDescripcion.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDescripcion.Location = new System.Drawing.Point(196, 264);
             this.tbDescripcion.MaxLength = 150;
             this.tbDescripcion.Multiline = true;
@@ -217,10 +223,11 @@
             // 
             // tbUrlImagen
             // 
+            this.tbUrlImagen.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUrlImagen.Location = new System.Drawing.Point(196, 126);
             this.tbUrlImagen.MaxLength = 1000;
             this.tbUrlImagen.Name = "tbUrlImagen";
-            this.tbUrlImagen.Size = new System.Drawing.Size(184, 20);
+            this.tbUrlImagen.Size = new System.Drawing.Size(184, 22);
             this.tbUrlImagen.TabIndex = 17;
             this.tbUrlImagen.Leave += new System.EventHandler(this.tbUrlImagen_Leave);
             // 
@@ -237,8 +244,7 @@
             // 
             // pbImagenAlta
             // 
-            this.pbImagenAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.pbImagenAlta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImagenAlta.BackColor = System.Drawing.Color.White;
             this.pbImagenAlta.Location = new System.Drawing.Point(470, 20);
             this.pbImagenAlta.Name = "pbImagenAlta";
             this.pbImagenAlta.Size = new System.Drawing.Size(222, 303);

@@ -24,35 +24,91 @@ namespace presentacion
         {
             InitializeComponent();
 
-            // Configurar el Timer
+            // Configurar el Timer sstrlabelPrincipal
             timer = new Timer();
             timer.Interval = 10000; // 10000 milisegundos = 10 segundos
             timer.Tick += Timer_Tick;
-            //timer.Start();
-
-            ////placeholder en FiltroRapido
-            //tbFiltroBR.GotFocus += (sender, e) => Helper.RemoverTexto(tbFiltroBR);
-            //tbFiltroBR.LostFocus += (sender, e) => Helper.AgregarTexto(tbFiltroBR);
-
         }
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
         {
+            try
+            {
+                //al iniciar, se oculta el panel para cargar formAltaArticulo
+                panelPrincipal.Visible = false;
 
-            //al iniciar, se oculta el panel para cargar formAltaArticulo
-            panelPrincipal.Visible = false;
-            
-            //1ro cargarmos los elementos para el datagridview
-            cargarDataGridView();
+                cargarDataGridView();
+                cargarComboBoxes();
+                ocultarSeccionFiltrar();
 
-            cargarComboBoxes();
+                articuloSeleccionado = listaArticulos[0]; //articulo seleccionado por defecto
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
-            ocultarSeccionFiltrar();
+        public void loadForms(object Form) //metodo para cargar form dentro de panelPrincipal
+        {
+            try
+            {
+                if (panelPrincipal.Controls.Count > 0)
+                {
+                    panelPrincipal.Controls.RemoveAt(0);
+                }
 
-            articuloSeleccionado = listaArticulos[0]; //articulo seleccionado por defecto
+                Form f = Form as Form;
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                panelPrincipal.Controls.Add(f);
+                panelPrincipal.Tag = f;
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
-            
+        }
 
+        private void cargarDataGridView()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                listaArticulos = negocio.listar();
+                dgvArticulos.DataSource = listaArticulos;
+
+                Helper.CargarImagen(listaArticulos[0].ImagenUrl, pbImagenArticulo);
+                cargarDescripcion(listaArticulos[0].Descripcion);
+                ocultarColumnas();
+
+                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.00";    //limitar decimales
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cargarComboBoxes()
+        {
+            try
+            {
+                cbCampo.Items.Add("Código");
+                cbCampo.Items.Add("Nombre");
+                cbCampo.Items.Add("Marca");
+                cbCampo.Items.Add("Categoría");
+                cbCampo.Items.Add("Precio");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void ocultarSeccionFiltrar()
@@ -74,25 +130,6 @@ namespace presentacion
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void cargarComboBoxes()
-        {
-            try
-            {
-                cbCampo.Items.Add("Código");
-                cbCampo.Items.Add("Nombre");
-                cbCampo.Items.Add("Marca");
-                cbCampo.Items.Add("Categoría");
-                cbCampo.Items.Add("Precio");
-
-            }
-            catch (Exception ex)
-            {
-
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -102,30 +139,6 @@ namespace presentacion
             try
             {
                 tbDescripcion.Text = descripcion;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void cargarDataGridView()
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-
-            try
-            {
-                listaArticulos = negocio.listar();
-                dgvArticulos.DataSource = listaArticulos;
-
-                Helper.CargarImagen(listaArticulos[0].ImagenUrl, pbImagenArticulo);
-                cargarDescripcion(listaArticulos[0].Descripcion);
-
-                ocultarColumnas();
-
-                //limitar decimales
-                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.00";
-
             }
             catch (Exception ex)
             {
@@ -148,26 +161,43 @@ namespace presentacion
             }
         }
 
-        public void loadForms(object Form) //metodo para cargar form dentro de panelPrincipal
+        private bool validarFiltroAvanzado()
         {
-            try
+            if (cbCampo.SelectedIndex < 0)
             {
-                if (panelPrincipal.Controls.Count > 0)
+                timer.Start();
+                sstrlabelPrincipal.Text = "Por favor, seleccione un campo para filtrar";
+                return true;
+            }
+
+            if (cbCriterio.SelectedIndex < 0)
+            {
+                timer.Start();
+                sstrlabelPrincipal.Text = "Por favor, seleccione un criterio para filtrar";
+                return true;
+            }
+
+            if (cbCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(tbFiltro.Text))
                 {
-                    panelPrincipal.Controls.RemoveAt(0);
+                    timer.Start();
+                    sstrlabelPrincipal.Text = "Por favor, cargue el filtro para numericos";
+                    return true;
                 }
-                Form f = Form as Form;
-                f.TopLevel = false;
-                f.Dock = DockStyle.Fill;
-                panelPrincipal.Controls.Add(f);
-                panelPrincipal.Tag = f;
-                f.Show();
             }
-            catch (Exception ex)
+            return false;
+        }
+
+        private void resetearRadioButtons()
+        {
+            if (rbFiltroRapido.Checked == true || rbFiltroAvanzado.Checked == true)
             {
-                MessageBox.Show(ex.ToString());
+                rbFiltroRapido.Checked = false;
+                rbFiltroAvanzado.Checked = false;
+                gbFiltros.Location = new System.Drawing.Point(55, 52);
+                ocultarSeccionFiltrar();
             }
-            
         }
 
         // ----------------------------- eventos ------------------------------
@@ -201,7 +231,6 @@ namespace presentacion
                 gbFiltros.Visible = true;
                 resetearRadioButtons();
 
-                //loadForms(new frmListadoArticulo());
                 panelPrincipal.Visible = false;
 
                 //habilitar botones
@@ -217,8 +246,6 @@ namespace presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-            
-
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -227,9 +254,7 @@ namespace presentacion
             {
                 gbFiltros.Visible = false;
                 ocultarSeccionFiltrar();
-
-                //Articulo articuloSeleccionado;
-                //articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;        
+       
                 panelPrincipal.Visible = true;
                 loadForms(new frmAltaArticulo(articuloSeleccionado));
 
@@ -241,23 +266,19 @@ namespace presentacion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
-            
+            }  
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Articulo articuloSeleccionado;
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
             try
             {
-                DialogResult respuesta = MessageBox.Show("De verdad desea eliminarlo?","Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("De verdad desea eliminar "+ articuloSeleccionado.Nombre + "?","Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
-                    //articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                     articuloNegocio.eliminar(articuloSeleccionado.Id);
-                
                 }
 
                 btnEliminar.ForeColor = System.Drawing.Color.Red;
@@ -275,11 +296,6 @@ namespace presentacion
             {
                 if (dgvArticulos.CurrentRow != null)
                 {
-                    //Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    //Helper.CargarImagen(seleccionado.ImagenUrl, pbImagenArticulo);
-                    //cargarDescripcion(seleccionado.Descripcion);
-
-                    //cambia si y solo si se hace selecciona otro
                     articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                     Helper.CargarImagen(articuloSeleccionado.ImagenUrl, pbImagenArticulo);
                     cargarDescripcion(articuloSeleccionado.Descripcion);
@@ -297,7 +313,7 @@ namespace presentacion
             try
             {
                 string opcion = cbCampo.SelectedItem.ToString();
-                if (opcion == "Precio") //se va a seleccionar un numero
+                if (opcion == "Precio") //se va a seleccionar un numero decimal
                 {
                     cbCriterio.Items.Clear();
                     cbCriterio.Items.Add("Mayor a");
@@ -318,9 +334,7 @@ namespace presentacion
                     //deshabilita evento solo nro decimal
                     tbFiltro.KeyPress -= new KeyPressEventHandler(Helper.permitirSoloDecimal);
                 }
-
                 tbFiltro.Clear();
-
 
             }
             catch (Exception ex)
@@ -334,18 +348,15 @@ namespace presentacion
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                if (validarFiltro()) //retorna un bool segun si los desplegables de Campo y Criterio esten vacios o no
+                if (validarFiltroAvanzado()) //retorna true si los desplegables de Campo/Criterio o tbPrecio estan vacios 
                 {
-                    return; //return para detener la ejecucion
+                    return; 
                 }
 
                 string campo = cbCampo.SelectedItem.ToString();
                 string criterio = cbCriterio.SelectedItem.ToString();
                 string filtro = tbFiltro.Text;
                 dgvArticulos.DataSource = negocio.listarFiltroAvanzado(campo, criterio, filtro);
-
-
-
             }
             catch (Exception ex)
             {
@@ -353,84 +364,21 @@ namespace presentacion
             }
         }
 
-        private bool validarFiltro()
-        {
-            if (cbCampo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
-            {
-                //MessageBox.Show("Por favor, seleccione el campo para filtrar");
-                timer.Start();
-                sstrlabelPrincipal.Text = "Por favor, seleccione un campo para filtrar";
-                return true;
-            }
-
-            if (cbCriterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
-            {
-                //MessageBox.Show("Por favor, seleccione el criterio para filtrar");
-                timer.Start();
-                sstrlabelPrincipal.Text = "Por favor, seleccione un criterio para filtrar";
-                return true;
-            }
-
-            //mejorarlo en un metodo de clase helper.
-            if (cbCampo.SelectedItem.ToString() == "Precio") //filtro para Precio
-            {
-                if (string.IsNullOrEmpty(tbFiltro.Text))
-                //si el text box del filtro avanzado esta vacio o es nulo...                                        
-                {
-                    //MessageBox.Show("Debes cargar el filtro para numericos...");
-                    timer.Start();
-                    sstrlabelPrincipal.Text = "Por favor, cargue el filtro para numericos";
-                    return true;
-                }
-                //if (!(Helper.SoloDecimal(tbFiltro.Text))) //si no cargaste solo numeros...
-                //{
-                //    MessageBox.Show("Solo nros para ingresar por un campo numerico...");
-                //    return true;
-                //}                
-
-            }
-            return false; //todo ok
-        }
-
         private void tbFiltroBR_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada;
-            //string criterio = cbCampo.SelectedItem.ToString();
             string filtro = tbFiltroBR.Text;
 
             try
             {
-                //if (filtro.Length > 1 && criterio.Equals("Nombre"))
                 if (filtro.Length > 1)
                 {
                     listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
                 }
-                //if (filtro.Length > 1 && criterio.Equals("Código"))
-                //{
-                //    listaFiltrada = listaArticulos.FindAll(x => x.Codigo.ToUpper().Contains(filtro.ToUpper()));
-                //}
-
-                //else if (filtro.Length > 1 && criterio.Equals("Nombre"))
-                //{
-                //    listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
-                //}
-
-                //else if (filtro.Length > 1 && criterio.Equals("Marca"))
-                //{
-                //    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString().ToUpper().Contains(filtro.ToUpper()));
-                //}
-
-                //else if (filtro.Length > 1 && criterio.Equals("Precio"))
-                //{
-                //    listaFiltrada = listaArticulos.FindAll(x => x.Precio.ToString().ToUpper().Contains(filtro.ToUpper()));
-                //}
 
                 else
                 {
                     listaFiltrada = listaArticulos;
-
-                    //tbFiltroBR.Text = "add Name...";
-                    //tbFiltroBR.ForeColor = Color.Gray;
                 }
 
                 dgvArticulos.DataSource = null; //primero limpiamos
@@ -452,8 +400,6 @@ namespace presentacion
                 cbCampo.ResetText();
                 cbCriterio.ResetText();
 
-                //timer.Start();
-
                 cargarDataGridView();
             }
             catch (Exception ex)
@@ -469,9 +415,6 @@ namespace presentacion
                 btnFiltrar.Visible = false;
                 btnLimpiarFiltro.Visible = false;
 
-                //lblCampo.Visible = true;
-                //cbCampo.Visible = true;
-
                 lblCampo.Visible = false;
                 cbCampo.Visible = false;
 
@@ -485,11 +428,8 @@ namespace presentacion
                 tbFiltro.Visible = false;
 
                 gbFiltros.Location = new System.Drawing.Point(55, 30);
-                //lblCampo.Location = new System.Drawing.Point(162, 80);
-                //cbCampo.Location = new System.Drawing.Point(204, 75);
                 lblFiltroBR.Location = new System.Drawing.Point(55, 80);
                 tbFiltroBR.Location = new System.Drawing.Point(160, 75);
-                //agregar el resto de movimientos, ocultamiento.
             }
             catch (Exception ex)
             {
@@ -526,7 +466,6 @@ namespace presentacion
 
                 lblFiltro.Location = new System.Drawing.Point(415, 80);
                 tbFiltro.Location = new System.Drawing.Point(446, 75);
-
             }
             catch (Exception ex)
             {
@@ -538,17 +477,6 @@ namespace presentacion
         {
             sstrlabelPrincipal.Text = string.Empty;
             timer.Stop();
-        }
-
-        private void resetearRadioButtons()
-        {
-            if(rbFiltroRapido.Checked == true || rbFiltroAvanzado.Checked == true)
-            {
-                rbFiltroRapido.Checked = false;
-                rbFiltroAvanzado.Checked = false;
-                gbFiltros.Location = new System.Drawing.Point(55, 52);
-                ocultarSeccionFiltrar();
-            }
         }
 
         private void btnListar_MouseEnter(object sender, EventArgs e)
@@ -566,14 +494,12 @@ namespace presentacion
         private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.Black;
-            //btnAgregar.Image = presentacion.Properties.Resources._32360_48;
             btnAgregar.Image = presentacion.Properties.Resources.add_B;
         }
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.White;
-            //btnAgregar.Image = presentacion.Properties.Resources._32360_W2;
             btnAgregar.Image = presentacion.Properties.Resources.add_W;
         }
 
@@ -591,7 +517,7 @@ namespace presentacion
 
         private void btnEliminar_MouseEnter(object sender, EventArgs e)
         {
-            btnEliminar.ForeColor = System.Drawing.Color.Red;
+            btnEliminar.ForeColor = System.Drawing.Color.FromArgb(255, 48, 49);
             btnEliminar.Image = presentacion.Properties.Resources.delete_R;
         }
 
@@ -620,18 +546,5 @@ namespace presentacion
         {
             btnFiltrar.ForeColor = System.Drawing.Color.White;
         }
-
-
-
-        //private void btnListar_MouseEnter(object sender, EventArgs e)
-        //{
-        //    btnListar.ForeColor = System.Drawing.Color.Black;
-        //}
-
-        //private void btnListar_MouseLeave(object sender, EventArgs e)
-        //{
-        //    btnListar.ForeColor = System.Drawing.Color.White;
-        //}
-
     }
 }
