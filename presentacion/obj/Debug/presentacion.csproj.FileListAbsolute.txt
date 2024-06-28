@@ -12,7 +12,6 @@ C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\Proyecto
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\bin\Debug\presentacion.exe
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\bin\Debug\presentacion.pdb
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.csproj.AssemblyReference.cache
-C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmPrincipal.resources
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.Properties.Resources.resources
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.csproj.GenerateResource.cache
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.csproj.CoreCompileInputs.cache
@@ -24,5 +23,4 @@ C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\Proyecto
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\bin\Debug\negocio.pdb
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presenta.D2D8CCE5.Up2Date
 C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmAltaArticulo.resources
-C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmPrincipal2.resources
-C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmListadoArticulo.resources
+C:\Users\donat\OneDrive\Escritorio\Maxi programa NIVEL 2\Proyecto Final\ProyectoFinalLV2_WinForm_GestorArticulos\presentacion\obj\Debug\presentacion.frmPrincipal.resources
