@@ -143,6 +143,56 @@ namespace presentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_R {
+            get {
+                object obj = ResourceManager.GetObject("delete_R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_W {
+            get {
+                object obj = ResourceManager.GetObject("delete_W", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_W__1_ {
+            get {
+                object obj = ResourceManager.GetObject("delete_W (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_B {
+            get {
+                object obj = ResourceManager.GetObject("edit_B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_W {
+            get {
+                object obj = ResourceManager.GetObject("edit_W", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list_B {
             get {
                 object obj = ResourceManager.GetObject("list_B", resourceCulture);
@@ -153,9 +203,19 @@ namespace presentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap list_B1 {
+        internal static System.Drawing.Bitmap list_B_32 {
             get {
-                object obj = ResourceManager.GetObject("list_B1", resourceCulture);
+                object obj = ResourceManager.GetObject("list_B_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_W {
+            get {
+                object obj = ResourceManager.GetObject("list_W", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

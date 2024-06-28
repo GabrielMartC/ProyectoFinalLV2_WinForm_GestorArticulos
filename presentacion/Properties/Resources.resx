@@ -118,28 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="add_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_W1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_W1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="32360_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32360_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_B.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="list_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="32360" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\32360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="32360_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32360_48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32360_W2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32360_W2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_B1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_W (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_W (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32360_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32360_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_B.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_R.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_W.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_W2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_W2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_W1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_W1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="32360_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32360_48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="32360_W2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32360_W2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list_B_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_B_32.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

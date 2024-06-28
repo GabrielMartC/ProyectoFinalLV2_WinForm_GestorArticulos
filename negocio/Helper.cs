@@ -18,10 +18,10 @@ namespace negocio
                 pictureBox.Load(imagen);
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
-            catch (Exception) //preguntar si se puede usar un repositorio propio de imagenes...
+            catch (Exception) 
             {
-                pictureBox.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
-                //pictureBox.Load("");
+                //pictureBox.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
+                pictureBox.Load("https://raw.githubusercontent.com/GabrielMartC/ProyectoFinalLV2_WinForm_GestorArticulos/main/images/placeholder.png");
                 pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             }
         }

@@ -554,43 +554,51 @@ namespace presentacion
         private void btnListar_MouseEnter(object sender, EventArgs e)
         {
             btnListar.ForeColor = System.Drawing.Color.Black;
+            btnListar.Image = presentacion.Properties.Resources.list_B_32;
         }
 
         private void btnListar_MouseLeave(object sender, EventArgs e)
         {
             btnListar.ForeColor = System.Drawing.Color.White;
+            btnListar.Image = presentacion.Properties.Resources.list_W;
         }
 
         private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.Black;
             //btnAgregar.Image = presentacion.Properties.Resources._32360_48;
+            btnAgregar.Image = presentacion.Properties.Resources.add_B;
         }
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.White;
             //btnAgregar.Image = presentacion.Properties.Resources._32360_W2;
+            btnAgregar.Image = presentacion.Properties.Resources.add_W;
         }
 
         private void btnModificar_MouseEnter(object sender, EventArgs e)
         {
             btnModificar.ForeColor = System.Drawing.Color.Black;
+            btnModificar.Image = presentacion.Properties.Resources.edit_B;
         }
 
         private void btnModificar_MouseLeave(object sender, EventArgs e)
         {
             btnModificar.ForeColor = System.Drawing.Color.White;
+            btnModificar.Image = presentacion.Properties.Resources.edit_W;
         }
 
         private void btnEliminar_MouseEnter(object sender, EventArgs e)
         {
             btnEliminar.ForeColor = System.Drawing.Color.Red;
+            btnEliminar.Image = presentacion.Properties.Resources.delete_R;
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
         {
             btnEliminar.ForeColor = System.Drawing.Color.White;
+            btnEliminar.Image = presentacion.Properties.Resources.delete_W__1_;
         }
 
         private void btnLimpiarFiltro_MouseEnter(object sender, EventArgs e)
