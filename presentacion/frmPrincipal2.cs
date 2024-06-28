@@ -30,6 +30,10 @@ namespace presentacion
             timer.Tick += Timer_Tick;
             //timer.Start();
 
+            ////placeholder en FiltroRapido
+            //tbFiltroBR.GotFocus += (sender, e) => Helper.RemoverTexto(tbFiltroBR);
+            //tbFiltroBR.LostFocus += (sender, e) => Helper.AgregarTexto(tbFiltroBR);
+
         }
 
         private void frmPrincipal2_Load(object sender, EventArgs e)
@@ -424,6 +428,9 @@ namespace presentacion
                 else
                 {
                     listaFiltrada = listaArticulos;
+
+                    //tbFiltroBR.Text = "add Name...";
+                    //tbFiltroBR.ForeColor = Color.Gray;
                 }
 
                 dgvArticulos.DataSource = null; //primero limpiamos
@@ -557,11 +564,13 @@ namespace presentacion
         private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.Black;
+            //btnAgregar.Image = presentacion.Properties.Resources._32360_48;
         }
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
             btnAgregar.ForeColor = System.Drawing.Color.White;
+            //btnAgregar.Image = presentacion.Properties.Resources._32360_W2;
         }
 
         private void btnModificar_MouseEnter(object sender, EventArgs e)

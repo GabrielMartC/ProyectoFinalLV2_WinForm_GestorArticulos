@@ -228,6 +228,26 @@ namespace presentacion
             timer.Stop();
         }
 
+        private void btnAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            btnAgregar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.ForeColor = System.Drawing.Color.Orange;
+        }
+
+        private void btnLimpiar_MouseEnter(object sender, EventArgs e)
+        {
+            btnLimpiar.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void btnLimpiar_MouseLeave(object sender, EventArgs e)
+        {
+            btnLimpiar.ForeColor = System.Drawing.Color.White;
+        }
+
         //private void tbPrecio_KeyPress(object sender, KeyPressEventArgs e) 
         ////solo permite ingreso de numeros y un "." para separar decimal
         //{

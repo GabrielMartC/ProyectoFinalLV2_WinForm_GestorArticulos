@@ -21,6 +21,7 @@ namespace negocio
             catch (Exception) //preguntar si se puede usar un repositorio propio de imagenes...
             {
                 pictureBox.Load("https://www.peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg");
+                //pictureBox.Load("");
                 pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             }
         }
@@ -66,70 +67,83 @@ namespace negocio
             }
         }
 
-        //public static void configurarTimer(Timer timer)
+        //public static void RemoverTexto(TextBox textBox)
         //{
-        //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
-        //    timer.Tick += timer_tick; ////el problema es esto, habria que habilitar el evento desde aca
-        //    timer.Start();
-        //}
-
-
-        //private static void timer_tick(object sender, EventArgs e, ToolStripStatusLabel label, Timer timer)
-        //{
-        //    label.Text = string.Empty;
-        //    timer.Stop();
-        //}
-
-        //public static void ConfigurarTimer(Timer timer, ToolStripStatusLabel label)
-        //{
-        //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
-        //    timer.Tag = (label, timer); // Almacena los parámetros adicionales en el Tag
-        //    timer.Tick += Timer_Tick;
-        //    timer.Start();
-        //}
-
-        //private static void Timer_Tick(object sender, EventArgs e)
-        //{
-        //    if (sender is Timer timer && timer.Tag is (ToolStripStatusLabel label, Timer _))
+        //    if (textBox.Text == "Enter text here...")
         //    {
-        //        label.Text = string.Empty;
-        //        timer.Stop();
+        //        textBox.Text = "";
         //    }
         //}
 
-
-        //public static bool validarFiltro(ComboBox campo, ComboBox criterio, ToolStripStatusLabel label, TextBox filtro)
+        //public static void AgregarTexto(TextBox textBox)
         //{
-        //    if (campo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
-        //    {
-        //        label.Text = "Por favor, seleccione el campo para filtrar";
-        //        return true;
-        //    }
-
-        //    if (criterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
-        //    {
-        //        label.Text = "Por favor, seleccione el criterio para filtrar";
-        //        return true;
-        //    }
-
-        //    if(campo.SelectedItem.ToString() == "Código") { }
-        //    if (campo.SelectedItem.ToString() == "Nombre") { }
-        //    if (campo.SelectedItem.ToString() == "Marca") { }
-        //    if (campo.SelectedItem.ToString() == "Categoría") { }
-        //    if (campo.SelectedItem.ToString() == "Precio") //filtro para Precio
-        //    {
-        //        if (string.IsNullOrEmpty(filtro.Text))
-        //        //si el text box del filtro avanzado esta vacio o es nulo...                                        
-        //        {
-        //            //MessageBox.Show("Debes cargar el filtro para numericos...");
-        //            label.Text = "Debes cargar el filtro para numericos...";
-        //            return true;
-        //        }
-
-
-        //    }
-        //    return false; //todo ok
+        //    if (string.IsNullOrWhiteSpace(textBox.Text))
+        //        textBox.Text = "Enter text here...";
         //}
-
     }
+
+    //public static void configurarTimer(Timer timer)
+    //{
+    //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+    //    timer.Tick += timer_tick; ////el problema es esto, habria que habilitar el evento desde aca
+    //    timer.Start();
+    //}
+
+
+    //private static void timer_tick(object sender, EventArgs e, ToolStripStatusLabel label, Timer timer)
+    //{
+    //    label.Text = string.Empty;
+    //    timer.Stop();
+    //}
+
+    //public static void ConfigurarTimer(Timer timer, ToolStripStatusLabel label)
+    //{
+    //    timer.Interval = 10000; // 10000 milisegundos = 10 segundos
+    //    timer.Tag = (label, timer); // Almacena los parámetros adicionales en el Tag
+    //    timer.Tick += Timer_Tick;
+    //    timer.Start();
+    //}
+
+    //private static void Timer_Tick(object sender, EventArgs e)
+    //{
+    //    if (sender is Timer timer && timer.Tag is (ToolStripStatusLabel label, Timer _))
+    //    {
+    //        label.Text = string.Empty;
+    //        timer.Stop();
+    //    }
+    //}
+
+
+    //public static bool validarFiltro(ComboBox campo, ComboBox criterio, ToolStripStatusLabel label, TextBox filtro)
+    //{
+    //    if (campo.SelectedIndex < 0) //si no hay seleccionado nada en el desplegable campo...
+    //    {
+    //        label.Text = "Por favor, seleccione el campo para filtrar";
+    //        return true;
+    //    }
+
+    //    if (criterio.SelectedIndex < 0) // si no hay seleccionado nada en el desplegable criterio
+    //    {
+    //        label.Text = "Por favor, seleccione el criterio para filtrar";
+    //        return true;
+    //    }
+
+    //    if(campo.SelectedItem.ToString() == "Código") { }
+    //    if (campo.SelectedItem.ToString() == "Nombre") { }
+    //    if (campo.SelectedItem.ToString() == "Marca") { }
+    //    if (campo.SelectedItem.ToString() == "Categoría") { }
+    //    if (campo.SelectedItem.ToString() == "Precio") //filtro para Precio
+    //    {
+    //        if (string.IsNullOrEmpty(filtro.Text))
+    //        //si el text box del filtro avanzado esta vacio o es nulo...                                        
+    //        {
+    //            //MessageBox.Show("Debes cargar el filtro para numericos...");
+    //            label.Text = "Debes cargar el filtro para numericos...";
+    //            return true;
+    //        }
+
+
+    //    }
+    //    return false; //todo ok
+    //}
 }

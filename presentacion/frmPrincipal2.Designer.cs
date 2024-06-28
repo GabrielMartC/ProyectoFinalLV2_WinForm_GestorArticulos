@@ -30,9 +30,9 @@ namespace presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -53,17 +53,17 @@ namespace presentacion
             this.rbFiltroAvanzado = new System.Windows.Forms.RadioButton();
             this.rbFiltroRapido = new System.Windows.Forms.RadioButton();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
-            this.pbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.sstrpPrincipal = new System.Windows.Forms.StatusStrip();
             this.sstrlabelPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pbImagenArticulo = new System.Windows.Forms.PictureBox();
             this.panelBotones.SuspendLayout();
             this.panelFiltros.SuspendLayout();
             this.gbFiltros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.sstrpPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -76,7 +76,7 @@ namespace presentacion
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(164, 531);
+            this.panelBotones.Size = new System.Drawing.Size(164, 534);
             this.panelBotones.TabIndex = 0;
             // 
             // btnListar
@@ -88,11 +88,12 @@ namespace presentacion
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.ForeColor = System.Drawing.Color.White;
+            this.btnListar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListar.Location = new System.Drawing.Point(6, 130);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(155, 50);
             this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "VER ARTICULOS";
+            this.btnListar.Text = "       Ver Articulos";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             this.btnListar.MouseEnter += new System.EventHandler(this.btnListar_MouseEnter);
@@ -110,7 +111,7 @@ namespace presentacion
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(155, 50);
             this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             this.btnEliminar.MouseEnter += new System.EventHandler(this.btnEliminar_MouseEnter);
@@ -128,7 +129,7 @@ namespace presentacion
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(155, 50);
             this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             this.btnModificar.MouseEnter += new System.EventHandler(this.btnModificar_MouseEnter);
@@ -142,11 +143,12 @@ namespace presentacion
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.Location = new System.Drawing.Point(4, 186);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(155, 50);
             this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "NUEVO";
+            this.btnAgregar.Text = "Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
@@ -174,6 +176,7 @@ namespace presentacion
             // 
             // tbFiltroBR
             // 
+            this.tbFiltroBR.BackColor = System.Drawing.Color.White;
             this.tbFiltroBR.Location = new System.Drawing.Point(277, 7);
             this.tbFiltroBR.MaxLength = 50;
             this.tbFiltroBR.Name = "tbFiltroBR";
@@ -186,7 +189,7 @@ namespace presentacion
             this.lblFiltroBR.AutoSize = true;
             this.lblFiltroBR.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltroBR.ForeColor = System.Drawing.Color.White;
-            this.lblFiltroBR.Location = new System.Drawing.Point(181, 10);
+            this.lblFiltroBR.Location = new System.Drawing.Point(167, 10);
             this.lblFiltroBR.Name = "lblFiltroBR";
             this.lblFiltroBR.Size = new System.Drawing.Size(105, 13);
             this.lblFiltroBR.TabIndex = 30;
@@ -204,7 +207,7 @@ namespace presentacion
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(94, 23);
             this.btnFiltrar.TabIndex = 29;
-            this.btnFiltrar.Text = "BUSCAR";
+            this.btnFiltrar.Text = "Buscar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             this.btnFiltrar.MouseEnter += new System.EventHandler(this.btnFiltrar_MouseEnter);
@@ -281,7 +284,7 @@ namespace presentacion
             this.btnLimpiarFiltro.Name = "btnLimpiarFiltro";
             this.btnLimpiarFiltro.Size = new System.Drawing.Size(94, 23);
             this.btnLimpiarFiltro.TabIndex = 22;
-            this.btnLimpiarFiltro.Text = "LIMPIAR TODO";
+            this.btnLimpiarFiltro.Text = "Limpiar Todo";
             this.btnLimpiarFiltro.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltro.Click += new System.EventHandler(this.btnLimpiarFiltro_Click);
             this.btnLimpiarFiltro.MouseEnter += new System.EventHandler(this.btnLimpiarFiltro_MouseEnter);
@@ -289,6 +292,7 @@ namespace presentacion
             // 
             // gbFiltros
             // 
+            this.gbFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.gbFiltros.Controls.Add(this.rbFiltroAvanzado);
             this.gbFiltros.Controls.Add(this.rbFiltroRapido);
             this.gbFiltros.Location = new System.Drawing.Point(55, 52);
@@ -337,38 +341,32 @@ namespace presentacion
             this.tbDescripcion.Size = new System.Drawing.Size(222, 98);
             this.tbDescripcion.TabIndex = 6;
             // 
-            // pbImagenArticulo
-            // 
-            this.pbImagenArticulo.BackColor = System.Drawing.Color.White;
-            this.pbImagenArticulo.Location = new System.Drawing.Point(651, 99);
-            this.pbImagenArticulo.Name = "pbImagenArticulo";
-            this.pbImagenArticulo.Size = new System.Drawing.Size(222, 303);
-            this.pbImagenArticulo.TabIndex = 5;
-            this.pbImagenArticulo.TabStop = false;
-            // 
             // dgvArticulos
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvArticulos.AllowUserToResizeColumns = false;
+            this.dgvArticulos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Historic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
             this.dgvArticulos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
@@ -386,7 +384,7 @@ namespace presentacion
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.panelPrincipal.Location = new System.Drawing.Point(164, 100);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(715, 431);
+            this.panelPrincipal.Size = new System.Drawing.Size(715, 434);
             this.panelPrincipal.TabIndex = 8;
             // 
             // sstrpPrincipal
@@ -394,7 +392,7 @@ namespace presentacion
             this.sstrpPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.sstrpPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sstrlabelPrincipal});
-            this.sstrpPrincipal.Location = new System.Drawing.Point(164, 509);
+            this.sstrpPrincipal.Location = new System.Drawing.Point(164, 512);
             this.sstrpPrincipal.Name = "sstrpPrincipal";
             this.sstrpPrincipal.Size = new System.Drawing.Size(715, 22);
             this.sstrpPrincipal.TabIndex = 9;
@@ -403,7 +401,7 @@ namespace presentacion
             // sstrlabelPrincipal
             // 
             this.sstrlabelPrincipal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.sstrlabelPrincipal.ForeColor = System.Drawing.Color.White;
+            this.sstrlabelPrincipal.ForeColor = System.Drawing.Color.Orange;
             this.sstrlabelPrincipal.Name = "sstrlabelPrincipal";
             this.sstrlabelPrincipal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.sstrlabelPrincipal.Size = new System.Drawing.Size(700, 17);
@@ -411,12 +409,21 @@ namespace presentacion
             this.sstrlabelPrincipal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sstrlabelPrincipal.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
+            // pbImagenArticulo
+            // 
+            this.pbImagenArticulo.BackColor = System.Drawing.Color.White;
+            this.pbImagenArticulo.Location = new System.Drawing.Point(651, 99);
+            this.pbImagenArticulo.Name = "pbImagenArticulo";
+            this.pbImagenArticulo.Size = new System.Drawing.Size(222, 303);
+            this.pbImagenArticulo.TabIndex = 5;
+            this.pbImagenArticulo.TabStop = false;
+            // 
             // frmPrincipal2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(879, 531);
+            this.ClientSize = new System.Drawing.Size(879, 534);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.sstrpPrincipal);
             this.Controls.Add(this.panelFiltros);
@@ -433,10 +440,10 @@ namespace presentacion
             this.panelFiltros.PerformLayout();
             this.gbFiltros.ResumeLayout(false);
             this.gbFiltros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.sstrpPrincipal.ResumeLayout(false);
             this.sstrpPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

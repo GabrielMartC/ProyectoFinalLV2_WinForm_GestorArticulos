@@ -86,13 +86,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +110,21 @@
       <Project>{bbe5c465-3c64-4456-ab08-005bc02db69d}</Project>
       <Name>negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32360_48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32360_W.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32360_W2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_W2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_B.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
