@@ -45,11 +45,10 @@ namespace negocio
             }
         }
 
-        public List<Articulo> listar() //mejorado
+        public List<Articulo> listar() 
         {
             List<Articulo> listaArticulos = new List<Articulo>();
-            AccesoDatos datos = new AccesoDatos(); //Ya establace por defecto a la conexion
-                                                   //db. Crea un comando. 
+            AccesoDatos datos = new AccesoDatos(); 
 
             try
             {
@@ -204,7 +203,6 @@ namespace negocio
             try
             {
                 datos.setearConsulta("Insert Into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) Values (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)");
-                //datos.setearParametro();
                 datos.setearParametro("@Codigo",articuloNuevo.Codigo);
                 datos.setearParametro("@Nombre", articuloNuevo.Nombre);
                 datos.setearParametro("@Descripcion", articuloNuevo.Descripcion);

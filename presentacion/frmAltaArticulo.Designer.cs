@@ -81,7 +81,7 @@
             this.tbCodigo.MaxLength = 50;
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(184, 22);
-            this.tbCodigo.TabIndex = 2;
+            this.tbCodigo.TabIndex = 0;
             // 
             // tbNombre
             // 
@@ -90,7 +90,7 @@
             this.tbNombre.MaxLength = 50;
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(184, 22);
-            this.tbNombre.TabIndex = 4;
+            this.tbNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -122,7 +122,7 @@
             this.cbMarca.Location = new System.Drawing.Point(196, 160);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(184, 21);
-            this.cbMarca.TabIndex = 6;
+            this.cbMarca.TabIndex = 3;
             // 
             // cbCategoria
             // 
@@ -132,7 +132,7 @@
             this.cbCategoria.Location = new System.Drawing.Point(196, 195);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(184, 21);
-            this.cbCategoria.TabIndex = 8;
+            this.cbCategoria.TabIndex = 4;
             // 
             // lblCategoria
             // 
@@ -162,7 +162,7 @@
             this.tbPrecio.Location = new System.Drawing.Point(196, 230);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(184, 22);
-            this.tbPrecio.TabIndex = 10;
+            this.tbPrecio.TabIndex = 5;
             // 
             // tbDescripcion
             // 
@@ -172,7 +172,7 @@
             this.tbDescripcion.Multiline = true;
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(184, 59);
-            this.tbDescripcion.TabIndex = 12;
+            this.tbDescripcion.TabIndex = 6;
             // 
             // lblDescripcion
             // 
@@ -196,7 +196,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(128, 339);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(97, 27);
-            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar Todo";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -214,7 +214,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(313, 329);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(134, 46);
-            this.btnAgregar.TabIndex = 15;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -228,7 +228,7 @@
             this.tbUrlImagen.MaxLength = 1000;
             this.tbUrlImagen.Name = "tbUrlImagen";
             this.tbUrlImagen.Size = new System.Drawing.Size(184, 22);
-            this.tbUrlImagen.TabIndex = 17;
+            this.tbUrlImagen.TabIndex = 2;
             this.tbUrlImagen.Leave += new System.EventHandler(this.tbUrlImagen_Leave);
             // 
             // lblUrlImagen
