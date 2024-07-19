@@ -383,6 +383,7 @@ namespace presentacion
 
                 dgvArticulos.DataSource = null; //primero limpiamos
                 dgvArticulos.DataSource = listaFiltrada;
+                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "N2";
                 ocultarColumnas();
             }
             catch (Exception ex)
