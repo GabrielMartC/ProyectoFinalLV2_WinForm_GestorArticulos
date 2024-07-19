@@ -85,7 +85,7 @@ namespace presentacion
                 cargarDescripcion(listaArticulos[0].Descripcion);
                 ocultarColumnas();
 
-                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "0.00";    //limitar decimales
+                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "N2";    //limitar decimales
 
             }
             catch (Exception ex)
