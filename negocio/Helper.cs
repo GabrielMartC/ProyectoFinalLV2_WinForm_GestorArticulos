@@ -20,7 +20,7 @@ namespace negocio
             }
             catch (Exception) 
             {
-                pictureBox.Load("https://raw.githubusercontent.com/GabrielMartC/ProyectoFinalLV2_WinForm_GestorArticulos/main/images/placeholder.png");
+                pictureBox.Load("https://raw.githubusercontent.com/GabrielMartC/ProyectoFinalLV2_WinForm_GestorArticulos/main/img/placeholder.png");
                 pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             }
         }
